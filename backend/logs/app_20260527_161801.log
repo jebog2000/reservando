@@ -1,0 +1,97 @@
+2026-05-27 16:18:01,426 - main - INFO - === Logging system initialized ===
+2026-05-27 16:18:01,426 - main - INFO - Log file: logs/app_20260527_161801.log
+2026-05-27 16:18:01,426 - main - INFO - Log level: INFO
+2026-05-27 16:18:01,426 - main - INFO - Timestamp: 20260527_161801
+2026-05-27 16:18:02,448 - main - INFO - Included router: routers.aihub.router
+2026-05-27 16:18:02,468 - main - INFO - Included router: routers.auth.router
+2026-05-27 16:18:02,517 - main - INFO - Included router: routers.clients.router
+2026-05-27 16:18:02,536 - main - INFO - Included router: routers.google_calendar.router
+2026-05-27 16:18:02,538 - main - INFO - Included router: routers.health.router
+2026-05-27 16:18:02,592 - main - INFO - Included router: routers.printer_settings.router
+2026-05-27 16:18:02,662 - main - INFO - Included router: routers.reservations.router
+2026-05-27 16:18:02,711 - main - INFO - Included router: routers.salons.router
+2026-05-27 16:18:02,734 - main - INFO - Included router: routers.settings.router
+2026-05-27 16:18:02,785 - main - INFO - Included router: routers.storage.router
+2026-05-27 16:18:02,797 - main - INFO - Included router: routers.user.router
+2026-05-27 16:18:02,799 - main - INFO - === Application startup initiated ===
+2026-05-27 16:18:02,800 - services.database - INFO - Ignore creating tables
+2026-05-27 16:18:02,801 - services.mock_data - INFO - Ignore initialize data
+2026-05-27 16:18:02,801 - services.auth - INFO - Ignore initialize admin
+2026-05-27 16:18:02,801 - main - INFO - === Application startup completed successfully ===
+2026-05-27 16:18:02,843 - dependencies.auth - DEBUG - Authentication required for request GET /api/v1/auth/me
+2026-05-27 16:18:12,502 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-05-27 16:18:12,502 - core.database - WARNING - Database session maker not available, attempting lazy initialization...
+2026-05-27 16:18:12,502 - core.database - WARNING - Database not initialized, attempting lazy initialization...
+2026-05-27 16:18:12,502 - core.database - INFO - Starting database initialization...
+2026-05-27 16:18:12,502 - core.config - DEBUG - Read dynamic attribute database_url from environment variable DATABASE_URL
+2026-05-27 16:18:12,502 - core.database - INFO - Normalizing database URL for async compatibility...
+2026-05-27 16:18:12,503 - core.database - INFO - Creating async database engine...
+2026-05-27 16:18:12,503 - core.database - INFO - Using QueuePool with connection pooling for non-Lambda environment
+2026-05-27 16:18:12,658 - core.database - INFO - Database engine created successfully
+2026-05-27 16:18:12,658 - core.database - INFO - Creating async session maker...
+2026-05-27 16:18:12,658 - core.database - INFO - Async session maker created successfully
+2026-05-27 16:18:12,658 - core.database - INFO - Database connection initialized successfully
+2026-05-27 16:18:12,659 - core.database - DEBUG - [DB_OP] Starting create_tables
+2026-05-27 16:18:12,659 - core.database - INFO - 🔧 Starting table creation...
+2026-05-27 16:18:14,271 - core.database - INFO - Tables initialized successfully
+2026-05-27 16:18:14,271 - core.database - DEBUG - [DB_OP] Create tables completed in 1.6126s
+2026-05-27 16:18:14,335 - core.database - INFO - Lazy database initialization completed successfully
+2026-05-27 16:18:14,335 - core.database - DEBUG - [DB_OP] Database session created successfully in 1.8338s
+2026-05-27 16:18:14,336 - routers.reservations - DEBUG - Querying reservationss: query={"reservation_date__gte":"2026-05-01","reservation_date__lte":"2026-05-31"}, sort=reservation_date, skip=0, limit=200, fields=None
+2026-05-27 16:18:14,919 - routers.reservations - DEBUG - Found 14 reservationss
+2026-05-27 16:18:14,920 - core.database - DEBUG - [DB_OP] Database session cleanup after 2.4184s
+2026-05-27 16:18:18,404 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-05-27 16:18:18,405 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0005s
+2026-05-27 16:18:18,405 - routers.salons - DEBUG - Querying salonss: query={}, sort=None, skip=0, limit=50, fields=None
+2026-05-27 16:18:18,921 - routers.salons - DEBUG - Found 1 salonss
+2026-05-27 16:18:18,922 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.5177s
+2026-05-27 16:18:23,909 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-05-27 16:18:23,909 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0004s
+2026-05-27 16:18:23,909 - routers.clients - DEBUG - Querying clientss: query={"phone__contains":"22998006174"}, sort=name, skip=0, limit=10, fields=None
+2026-05-27 16:18:24,520 - routers.clients - DEBUG - Found 1 clientss
+2026-05-27 16:18:24,521 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.6122s
+2026-05-27 16:18:32,472 - core.config - DEBUG - Read dynamic attribute jwt_secret_key from environment variable JWT_SECRET_KEY
+2026-05-27 16:18:32,473 - core.config - DEBUG - Read dynamic attribute jwt_algorithm from environment variable JWT_ALGORITHM
+2026-05-27 16:18:32,489 - core.auth - DEBUG - Authentication token validated for user hash: 3d1d0765
+2026-05-27 16:18:32,490 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-05-27 16:18:32,491 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0004s
+2026-05-27 16:18:32,492 - routers.reservations - DEBUG - Creating new reservations with data: client_name='Jorge Eduardo Barcelos Ottoni Guedes' client_phone='22998006174' client_email='JORGE@FORNERIAGIORGIO.COM' reservation_date=datetime.date(2026, 5, 29) reservation_time='19:00' party_size=5 salon='ANEXO' notes='' status='a confirmar' preference='Rodízio' calendar_event_id=None
+2026-05-27 16:18:33,330 - services.reservations - INFO - Created reservations with id: 16
+2026-05-27 16:18:33,330 - routers.reservations - INFO - Reservations created successfully with id: 16
+2026-05-27 16:18:33,331 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.8407s
+2026-05-27 16:18:34,878 - routers.google_calendar - INFO - Creating calendar event: Reserva - Jorge Eduardo Barcelos Ottoni Guedes
+2026-05-27 16:18:34,987 - httpcore.connection - DEBUG - connect_tcp.started host='oauth2.googleapis.com' port=443 local_address=None timeout=10.0 socket_options=None
+2026-05-27 16:18:35,005 - httpcore.connection - DEBUG - connect_tcp.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x7f43b75919f0>
+2026-05-27 16:18:35,006 - httpcore.connection - DEBUG - start_tls.started ssl_context=<ssl.SSLContext object at 0x7f43b74d7640> server_hostname='oauth2.googleapis.com' timeout=10.0
+2026-05-27 16:18:35,015 - httpcore.connection - DEBUG - start_tls.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x7f43b9820ca0>
+2026-05-27 16:18:35,016 - httpcore.http11 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2026-05-27 16:18:35,016 - httpcore.http11 - DEBUG - send_request_headers.complete
+2026-05-27 16:18:35,017 - httpcore.http11 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2026-05-27 16:18:35,017 - httpcore.http11 - DEBUG - send_request_body.complete
+2026-05-27 16:18:35,017 - httpcore.http11 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2026-05-27 16:18:35,068 - httpcore.http11 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 401, b'Unauthorized', [(b'Cache-Control', b'no-cache, no-store, max-age=0, must-revalidate'), (b'Date', b'Wed, 27 May 2026 23:18:35 GMT'), (b'Pragma', b'no-cache'), (b'Expires', b'Mon, 01 Jan 1990 00:00:00 GMT'), (b'Content-Type', b'application/json; charset=utf-8'), (b'Vary', b'Origin'), (b'Vary', b'X-Origin'), (b'Vary', b'Referer'), (b'Content-Encoding', b'gzip'), (b'Server', b'scaffolding on HTTPServer2'), (b'X-XSS-Protection', b'0'), (b'X-Frame-Options', b'SAMEORIGIN'), (b'X-Content-Type-Options', b'nosniff'), (b'Alt-Svc', b'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'), (b'Transfer-Encoding', b'chunked')])
+2026-05-27 16:18:35,069 - httpx - INFO - HTTP Request: POST https://oauth2.googleapis.com/token "HTTP/1.1 401 Unauthorized"
+2026-05-27 16:18:35,070 - httpcore.http11 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2026-05-27 16:18:35,071 - httpcore.http11 - DEBUG - receive_response_body.complete
+2026-05-27 16:18:35,071 - httpcore.http11 - DEBUG - response_closed.started
+2026-05-27 16:18:35,071 - httpcore.http11 - DEBUG - response_closed.complete
+2026-05-27 16:18:35,071 - routers.google_calendar - ERROR - Failed to get access token: 401 {
+  "error": "deleted_client",
+  "error_description": "The OAuth client was deleted."
+}
+2026-05-27 16:18:35,072 - httpcore.connection - DEBUG - close.started
+2026-05-27 16:18:35,072 - httpcore.connection - DEBUG - close.complete
+2026-05-27 16:18:36,630 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-05-27 16:18:36,630 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0005s
+2026-05-27 16:18:36,631 - routers.clients - DEBUG - Querying clientss: query={"phone":"22998006174"}, sort=None, skip=0, limit=1, fields=None
+2026-05-27 16:18:37,144 - routers.clients - DEBUG - Found 1 clientss
+2026-05-27 16:18:37,145 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.5151s
+2026-05-27 16:18:38,585 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-05-27 16:18:38,586 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0006s
+2026-05-27 16:18:38,587 - routers.reservations - DEBUG - Querying reservationss: query={}, sort=-reservation_date, skip=0, limit=100, fields=None
+2026-05-27 16:18:39,099 - routers.reservations - DEBUG - Found 15 reservationss
+2026-05-27 16:18:39,100 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.5143s
+2026-05-27 16:18:43,125 - services.database - DEBUG - [DB_OP] Starting database close
+2026-05-27 16:18:43,193 - core.database - INFO - Database connection closed and engine disposed
+2026-05-27 16:18:43,193 - services.database - INFO - Database connections closed
+2026-05-27 16:18:43,193 - services.database - DEBUG - [DB_OP] Database close completed in 0.0679s

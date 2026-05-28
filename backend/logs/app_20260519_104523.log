@@ -1,0 +1,125 @@
+2026-05-19 10:45:23,373 - main - INFO - === Logging system initialized ===
+2026-05-19 10:45:23,373 - main - INFO - Log file: logs/app_20260519_104523.log
+2026-05-19 10:45:23,373 - main - INFO - Log level: INFO
+2026-05-19 10:45:23,373 - main - INFO - Timestamp: 20260519_104523
+2026-05-19 10:45:24,346 - main - INFO - Included router: routers.aihub.router
+2026-05-19 10:45:24,370 - main - INFO - Included router: routers.auth.router
+2026-05-19 10:45:24,373 - main - INFO - Included router: routers.health.router
+2026-05-19 10:45:24,435 - main - INFO - Included router: routers.printer_settings.router
+2026-05-19 10:45:24,502 - main - INFO - Included router: routers.reservations.router
+2026-05-19 10:45:24,560 - main - INFO - Included router: routers.salons.router
+2026-05-19 10:45:24,587 - main - INFO - Included router: routers.settings.router
+2026-05-19 10:45:24,639 - main - INFO - Included router: routers.storage.router
+2026-05-19 10:45:24,651 - main - INFO - Included router: routers.user.router
+2026-05-19 10:45:24,653 - main - INFO - === Application startup initiated ===
+2026-05-19 10:45:24,653 - services.database - INFO - Ignore creating tables
+2026-05-19 10:45:24,653 - services.mock_data - INFO - Ignore initialize data
+2026-05-19 10:45:24,653 - services.auth - INFO - Ignore initialize admin
+2026-05-19 10:45:24,654 - main - INFO - === Application startup completed successfully ===
+2026-05-19 10:45:34,640 - core.config - DEBUG - Read dynamic attribute jwt_secret_key from environment variable JWT_SECRET_KEY
+2026-05-19 10:45:34,640 - core.config - DEBUG - Read dynamic attribute jwt_algorithm from environment variable JWT_ALGORITHM
+2026-05-19 10:45:34,652 - core.auth - DEBUG - Authentication token validated for user hash: 3d1d0765
+2026-05-19 10:45:34,877 - core.auth - DEBUG - Authentication token validated for user hash: 3d1d0765
+2026-05-19 10:45:34,877 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-05-19 10:45:34,877 - core.database - WARNING - Database session maker not available, attempting lazy initialization...
+2026-05-19 10:45:34,877 - core.database - WARNING - Database not initialized, attempting lazy initialization...
+2026-05-19 10:45:34,877 - core.database - INFO - Starting database initialization...
+2026-05-19 10:45:34,877 - core.config - DEBUG - Read dynamic attribute database_url from environment variable DATABASE_URL
+2026-05-19 10:45:34,878 - core.database - INFO - Normalizing database URL for async compatibility...
+2026-05-19 10:45:34,879 - core.database - INFO - Creating async database engine...
+2026-05-19 10:45:34,879 - core.database - INFO - Using QueuePool with connection pooling for non-Lambda environment
+2026-05-19 10:45:34,936 - core.database - INFO - Database engine created successfully
+2026-05-19 10:45:34,936 - core.database - INFO - Creating async session maker...
+2026-05-19 10:45:34,936 - core.database - INFO - Async session maker created successfully
+2026-05-19 10:45:34,937 - core.database - INFO - Database connection initialized successfully
+2026-05-19 10:45:34,937 - core.database - DEBUG - [DB_OP] Starting create_tables
+2026-05-19 10:45:34,937 - core.database - INFO - 🔧 Starting table creation...
+2026-05-19 10:45:34,945 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-05-19 10:45:34,946 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0004s
+2026-05-19 10:45:34,946 - routers.reservations - DEBUG - Querying reservationss: query={"reservation_date__gte":"2026-05-01","reservation_date__lte":"2026-05-31"}, sort=reservation_date, skip=0, limit=200, fields=None
+2026-05-19 10:45:36,343 - routers.reservations - DEBUG - Found 1 reservationss
+2026-05-19 10:45:36,344 - core.database - DEBUG - [DB_OP] Database session cleanup after 1.3986s
+2026-05-19 10:45:37,805 - core.database - INFO - Tables initialized successfully
+2026-05-19 10:45:37,805 - core.database - DEBUG - [DB_OP] Create tables completed in 2.8684s
+2026-05-19 10:45:37,869 - core.database - INFO - Lazy database initialization completed successfully
+2026-05-19 10:45:37,869 - core.database - DEBUG - [DB_OP] Database session created successfully in 2.9922s
+2026-05-19 10:45:37,870 - routers.printer_settings - DEBUG - Querying printer_settingss: query=None, sort=None, skip=0, limit=20, fields=None
+2026-05-19 10:45:38,447 - routers.printer_settings - DEBUG - Found 0 printer_settingss
+2026-05-19 10:45:38,448 - core.database - DEBUG - [DB_OP] Database session cleanup after 3.5709s
+2026-05-19 10:46:04,891 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-05-19 10:46:04,891 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0005s
+2026-05-19 10:46:04,891 - routers.reservations - DEBUG - Querying reservationss: query={"reservation_date__gte":"2026-05-01","reservation_date__lte":"2026-05-31"}, sort=reservation_date, skip=0, limit=200, fields=None
+2026-05-19 10:46:05,462 - routers.reservations - DEBUG - Found 1 reservationss
+2026-05-19 10:46:05,463 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.5724s
+2026-05-19 10:46:35,312 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-05-19 10:46:35,313 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0011s
+2026-05-19 10:46:35,314 - routers.reservations - DEBUG - Querying reservationss: query={"reservation_date__gte":"2026-05-01","reservation_date__lte":"2026-05-31"}, sort=reservation_date, skip=0, limit=200, fields=None
+2026-05-19 10:46:35,700 - routers.reservations - DEBUG - Found 1 reservationss
+2026-05-19 10:46:35,701 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.3894s
+2026-05-19 10:47:05,308 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-05-19 10:47:05,308 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0005s
+2026-05-19 10:47:05,309 - routers.reservations - DEBUG - Querying reservationss: query={"reservation_date__gte":"2026-05-01","reservation_date__lte":"2026-05-31"}, sort=reservation_date, skip=0, limit=200, fields=None
+2026-05-19 10:47:05,693 - routers.reservations - DEBUG - Found 1 reservationss
+2026-05-19 10:47:05,694 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.3863s
+2026-05-19 10:47:35,303 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-05-19 10:47:35,304 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0009s
+2026-05-19 10:47:35,305 - routers.reservations - DEBUG - Querying reservationss: query={"reservation_date__gte":"2026-05-01","reservation_date__lte":"2026-05-31"}, sort=reservation_date, skip=0, limit=200, fields=None
+2026-05-19 10:47:35,689 - routers.reservations - DEBUG - Found 1 reservationss
+2026-05-19 10:47:35,690 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.3867s
+2026-05-19 10:48:05,299 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-05-19 10:48:05,299 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0004s
+2026-05-19 10:48:05,300 - routers.reservations - DEBUG - Querying reservationss: query={"reservation_date__gte":"2026-05-01","reservation_date__lte":"2026-05-31"}, sort=reservation_date, skip=0, limit=200, fields=None
+2026-05-19 10:48:05,681 - routers.reservations - DEBUG - Found 1 reservationss
+2026-05-19 10:48:05,682 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.3832s
+2026-05-19 10:48:35,292 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-05-19 10:48:35,293 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0006s
+2026-05-19 10:48:35,293 - routers.reservations - DEBUG - Querying reservationss: query={"reservation_date__gte":"2026-05-01","reservation_date__lte":"2026-05-31"}, sort=reservation_date, skip=0, limit=200, fields=None
+2026-05-19 10:48:35,679 - routers.reservations - DEBUG - Found 1 reservationss
+2026-05-19 10:48:35,680 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.3880s
+2026-05-19 10:49:05,288 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-05-19 10:49:05,293 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0046s
+2026-05-19 10:49:05,299 - routers.reservations - DEBUG - Querying reservationss: query={"reservation_date__gte":"2026-05-01","reservation_date__lte":"2026-05-31"}, sort=reservation_date, skip=0, limit=200, fields=None
+2026-05-19 10:49:05,685 - routers.reservations - DEBUG - Found 1 reservationss
+2026-05-19 10:49:05,687 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.3987s
+2026-05-19 10:49:35,294 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-05-19 10:49:35,295 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0008s
+2026-05-19 10:49:35,296 - routers.reservations - DEBUG - Querying reservationss: query={"reservation_date__gte":"2026-05-01","reservation_date__lte":"2026-05-31"}, sort=reservation_date, skip=0, limit=200, fields=None
+2026-05-19 10:49:35,679 - routers.reservations - DEBUG - Found 1 reservationss
+2026-05-19 10:49:35,680 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.3860s
+2026-05-19 10:50:05,297 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-05-19 10:50:05,297 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0006s
+2026-05-19 10:50:05,298 - routers.reservations - DEBUG - Querying reservationss: query={"reservation_date__gte":"2026-05-01","reservation_date__lte":"2026-05-31"}, sort=reservation_date, skip=0, limit=200, fields=None
+2026-05-19 10:50:05,727 - routers.reservations - DEBUG - Found 1 reservationss
+2026-05-19 10:50:05,728 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.4312s
+2026-05-19 10:50:35,293 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-05-19 10:50:35,293 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0005s
+2026-05-19 10:50:35,294 - routers.reservations - DEBUG - Querying reservationss: query={"reservation_date__gte":"2026-05-01","reservation_date__lte":"2026-05-31"}, sort=reservation_date, skip=0, limit=200, fields=None
+2026-05-19 10:50:35,675 - routers.reservations - DEBUG - Found 1 reservationss
+2026-05-19 10:50:35,676 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.3837s
+2026-05-19 10:50:56,852 - dependencies.auth - DEBUG - Authentication required for request GET /api/v1/auth/me
+2026-05-19 10:50:57,094 - core.auth - DEBUG - Authentication token validated for user hash: 3d1d0765
+2026-05-19 10:50:57,366 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-05-19 10:50:57,367 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0005s
+2026-05-19 10:50:57,367 - routers.reservations - DEBUG - Querying reservationss: query={"reservation_date__gte":"2026-05-01","reservation_date__lte":"2026-05-31"}, sort=reservation_date, skip=0, limit=200, fields=None
+2026-05-19 10:50:57,370 - core.auth - DEBUG - Authentication token validated for user hash: 3d1d0765
+2026-05-19 10:50:57,370 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-05-19 10:50:57,371 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0006s
+2026-05-19 10:50:57,371 - routers.printer_settings - DEBUG - Querying printer_settingss: query=None, sort=None, skip=0, limit=20, fields=None
+2026-05-19 10:50:57,745 - routers.reservations - DEBUG - Found 1 reservationss
+2026-05-19 10:50:57,746 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.3795s
+2026-05-19 10:50:57,874 - routers.printer_settings - DEBUG - Found 0 printer_settingss
+2026-05-19 10:50:57,875 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.5048s
+2026-05-19 10:51:28,296 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-05-19 10:51:28,297 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0004s
+2026-05-19 10:51:28,298 - routers.reservations - DEBUG - Querying reservationss: query={"reservation_date__gte":"2026-05-01","reservation_date__lte":"2026-05-31"}, sort=reservation_date, skip=0, limit=200, fields=None
+2026-05-19 10:51:28,800 - routers.reservations - DEBUG - Found 1 reservationss
+2026-05-19 10:51:28,802 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.5061s
+2026-05-19 10:51:58,291 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-05-19 10:51:58,291 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0005s
+2026-05-19 10:51:58,292 - routers.reservations - DEBUG - Querying reservationss: query={"reservation_date__gte":"2026-05-01","reservation_date__lte":"2026-05-31"}, sort=reservation_date, skip=0, limit=200, fields=None
+2026-05-19 10:51:58,669 - routers.reservations - DEBUG - Found 1 reservationss
+2026-05-19 10:51:58,670 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.3791s
+2026-05-19 10:52:17,118 - services.database - DEBUG - [DB_OP] Starting database close
+2026-05-19 10:52:17,250 - core.database - INFO - Database connection closed and engine disposed
+2026-05-19 10:52:17,250 - services.database - INFO - Database connections closed
+2026-05-19 10:52:17,250 - services.database - DEBUG - [DB_OP] Database close completed in 0.1323s

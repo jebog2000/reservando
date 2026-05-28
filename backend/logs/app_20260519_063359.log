@@ -1,0 +1,136 @@
+2026-05-19 06:33:59,406 - main - INFO - === Logging system initialized ===
+2026-05-19 06:33:59,407 - main - INFO - Log file: logs/app_20260519_063359.log
+2026-05-19 06:33:59,407 - main - INFO - Log level: INFO
+2026-05-19 06:33:59,407 - main - INFO - Timestamp: 20260519_063359
+2026-05-19 06:34:00,342 - main - INFO - Included router: routers.aihub.router
+2026-05-19 06:34:00,360 - main - INFO - Included router: routers.auth.router
+2026-05-19 06:34:00,361 - main - INFO - Included router: routers.health.router
+2026-05-19 06:34:00,417 - main - INFO - Included router: routers.reservations.router
+2026-05-19 06:34:00,472 - main - INFO - Included router: routers.salons.router
+2026-05-19 06:34:00,500 - main - INFO - Included router: routers.settings.router
+2026-05-19 06:34:00,540 - main - INFO - Included router: routers.storage.router
+2026-05-19 06:34:00,549 - main - INFO - Included router: routers.user.router
+2026-05-19 06:34:00,551 - main - INFO - === Application startup initiated ===
+2026-05-19 06:34:00,551 - services.database - INFO - Ignore creating tables
+2026-05-19 06:34:00,551 - services.mock_data - INFO - Ignore initialize data
+2026-05-19 06:34:00,551 - services.auth - INFO - Ignore initialize admin
+2026-05-19 06:34:00,551 - main - INFO - === Application startup completed successfully ===
+2026-05-19 06:34:06,049 - core.config - DEBUG - Read dynamic attribute jwt_secret_key from environment variable JWT_SECRET_KEY
+2026-05-19 06:34:06,049 - core.config - DEBUG - Read dynamic attribute jwt_algorithm from environment variable JWT_ALGORITHM
+2026-05-19 06:34:06,076 - core.auth - DEBUG - Authentication token validated for user hash: 3d1d0765
+2026-05-19 06:34:06,801 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-05-19 06:34:06,801 - core.database - WARNING - Database session maker not available, attempting lazy initialization...
+2026-05-19 06:34:06,801 - core.database - WARNING - Database not initialized, attempting lazy initialization...
+2026-05-19 06:34:06,801 - core.database - INFO - Starting database initialization...
+2026-05-19 06:34:06,801 - core.config - DEBUG - Read dynamic attribute database_url from environment variable DATABASE_URL
+2026-05-19 06:34:06,801 - core.database - INFO - Normalizing database URL for async compatibility...
+2026-05-19 06:34:06,802 - core.database - INFO - Creating async database engine...
+2026-05-19 06:34:06,803 - core.database - INFO - Using QueuePool with connection pooling for non-Lambda environment
+2026-05-19 06:34:06,861 - core.database - INFO - Database engine created successfully
+2026-05-19 06:34:06,861 - core.database - INFO - Creating async session maker...
+2026-05-19 06:34:06,861 - core.database - INFO - Async session maker created successfully
+2026-05-19 06:34:06,861 - core.database - INFO - Database connection initialized successfully
+2026-05-19 06:34:06,861 - core.database - DEBUG - [DB_OP] Starting create_tables
+2026-05-19 06:34:06,862 - core.database - INFO - 🔧 Starting table creation...
+2026-05-19 06:34:08,263 - core.database - INFO - Tables initialized successfully
+2026-05-19 06:34:08,264 - core.database - DEBUG - [DB_OP] Create tables completed in 1.4027s
+2026-05-19 06:34:08,326 - core.database - INFO - Lazy database initialization completed successfully
+2026-05-19 06:34:08,326 - core.database - DEBUG - [DB_OP] Database session created successfully in 1.5258s
+2026-05-19 06:34:08,327 - routers.reservations - DEBUG - Querying reservationss: query={"reservation_date__gte":"2026-05-01","reservation_date__lte":"2026-05-31"}, sort=reservation_date, skip=0, limit=200, fields=None
+2026-05-19 06:34:08,885 - routers.reservations - DEBUG - Found 0 reservationss
+2026-05-19 06:34:08,886 - core.database - DEBUG - [DB_OP] Database session cleanup after 2.0853s
+2026-05-19 06:35:25,834 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-05-19 06:35:25,834 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0004s
+2026-05-19 06:35:25,835 - routers.salons - DEBUG - Querying salonss: query={}, sort=None, skip=0, limit=50, fields=None
+2026-05-19 06:35:26,331 - routers.salons - DEBUG - Found 0 salonss
+2026-05-19 06:35:26,332 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.4983s
+2026-05-19 06:35:29,047 - dependencies.auth - DEBUG - Authentication required for request GET /api/v1/auth/me
+2026-05-19 06:35:32,462 - core.auth - DEBUG - Authentication token validated for user hash: 3d1d0765
+2026-05-19 06:35:32,806 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-05-19 06:35:32,806 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0004s
+2026-05-19 06:35:32,807 - routers.reservations - DEBUG - Querying reservationss: query={"reservation_date__gte":"2026-05-01","reservation_date__lte":"2026-05-31"}, sort=reservation_date, skip=0, limit=200, fields=None
+2026-05-19 06:35:33,173 - routers.reservations - DEBUG - Found 0 reservationss
+2026-05-19 06:35:33,174 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.3680s
+2026-05-19 06:35:40,940 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-05-19 06:35:40,941 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0004s
+2026-05-19 06:35:40,942 - routers.salons - DEBUG - Querying salonss: query={}, sort=None, skip=0, limit=50, fields=None
+2026-05-19 06:35:41,309 - routers.salons - DEBUG - Found 0 salonss
+2026-05-19 06:35:41,310 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.3694s
+2026-05-19 06:35:48,368 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-05-19 06:35:48,369 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0004s
+2026-05-19 06:35:48,369 - core.database - ERROR - Database session error: 1 validation error:
+  {'type': 'missing', 'loc': ('body', 'user_id'), 'msg': 'Field required', 'input': {'name': 'ANEXO', 'capacity': 30, 'description': '', 'active': True}}
+
+  File "/workspace/app/backend/routers/salons.py", line 182, in create_salons
+    POST /api/v1/entities/salons
+Traceback (most recent call last):
+  File "/workspace/app/backend/core/database.py", line 553, in get_db
+    yield session
+  File "/data/chats/ebbf05d7d0d94d1299f7d038f8deb27b/.cache/python/lib/python3.10/site-packages/fastapi/routing.py", line 120, in app
+    response = await f(request)
+  File "/data/chats/ebbf05d7d0d94d1299f7d038f8deb27b/.cache/python/lib/python3.10/site-packages/fastapi/routing.py", line 723, in app
+    raise validation_error
+fastapi.exceptions.RequestValidationError: 1 validation error:
+  {'type': 'missing', 'loc': ('body', 'user_id'), 'msg': 'Field required', 'input': {'name': 'ANEXO', 'capacity': 30, 'description': '', 'active': True}}
+
+  File "/workspace/app/backend/routers/salons.py", line 182, in create_salons
+    POST /api/v1/entities/salons
+2026-05-19 06:35:48,372 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.0043s
+2026-05-19 06:35:48,373 - core.database - ERROR - Failed to create database session: 1 validation error:
+  {'type': 'missing', 'loc': ('body', 'user_id'), 'msg': 'Field required', 'input': {'name': 'ANEXO', 'capacity': 30, 'description': '', 'active': True}}
+
+  File "/workspace/app/backend/routers/salons.py", line 182, in create_salons
+    POST /api/v1/entities/salons
+Traceback (most recent call last):
+  File "/workspace/app/backend/core/database.py", line 553, in get_db
+    yield session
+  File "/data/chats/ebbf05d7d0d94d1299f7d038f8deb27b/.cache/python/lib/python3.10/site-packages/fastapi/routing.py", line 120, in app
+    response = await f(request)
+  File "/data/chats/ebbf05d7d0d94d1299f7d038f8deb27b/.cache/python/lib/python3.10/site-packages/fastapi/routing.py", line 723, in app
+    raise validation_error
+fastapi.exceptions.RequestValidationError: 1 validation error:
+  {'type': 'missing', 'loc': ('body', 'user_id'), 'msg': 'Field required', 'input': {'name': 'ANEXO', 'capacity': 30, 'description': '', 'active': True}}
+
+  File "/workspace/app/backend/routers/salons.py", line 182, in create_salons
+    POST /api/v1/entities/salons
+2026-05-19 06:36:10,302 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-05-19 06:36:10,303 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0006s
+2026-05-19 06:36:10,303 - core.database - ERROR - Database session error: 1 validation error:
+  {'type': 'missing', 'loc': ('body', 'user_id'), 'msg': 'Field required', 'input': {'name': 'ANEXO', 'capacity': 30, 'description': '', 'active': True}}
+
+  File "/workspace/app/backend/routers/salons.py", line 182, in create_salons
+    POST /api/v1/entities/salons
+Traceback (most recent call last):
+  File "/workspace/app/backend/core/database.py", line 553, in get_db
+    yield session
+  File "/data/chats/ebbf05d7d0d94d1299f7d038f8deb27b/.cache/python/lib/python3.10/site-packages/fastapi/routing.py", line 120, in app
+    response = await f(request)
+  File "/data/chats/ebbf05d7d0d94d1299f7d038f8deb27b/.cache/python/lib/python3.10/site-packages/fastapi/routing.py", line 723, in app
+    raise validation_error
+fastapi.exceptions.RequestValidationError: 1 validation error:
+  {'type': 'missing', 'loc': ('body', 'user_id'), 'msg': 'Field required', 'input': {'name': 'ANEXO', 'capacity': 30, 'description': '', 'active': True}}
+
+  File "/workspace/app/backend/routers/salons.py", line 182, in create_salons
+    POST /api/v1/entities/salons
+2026-05-19 06:36:10,305 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.0026s
+2026-05-19 06:36:10,305 - core.database - ERROR - Failed to create database session: 1 validation error:
+  {'type': 'missing', 'loc': ('body', 'user_id'), 'msg': 'Field required', 'input': {'name': 'ANEXO', 'capacity': 30, 'description': '', 'active': True}}
+
+  File "/workspace/app/backend/routers/salons.py", line 182, in create_salons
+    POST /api/v1/entities/salons
+Traceback (most recent call last):
+  File "/workspace/app/backend/core/database.py", line 553, in get_db
+    yield session
+  File "/data/chats/ebbf05d7d0d94d1299f7d038f8deb27b/.cache/python/lib/python3.10/site-packages/fastapi/routing.py", line 120, in app
+    response = await f(request)
+  File "/data/chats/ebbf05d7d0d94d1299f7d038f8deb27b/.cache/python/lib/python3.10/site-packages/fastapi/routing.py", line 723, in app
+    raise validation_error
+fastapi.exceptions.RequestValidationError: 1 validation error:
+  {'type': 'missing', 'loc': ('body', 'user_id'), 'msg': 'Field required', 'input': {'name': 'ANEXO', 'capacity': 30, 'description': '', 'active': True}}
+
+  File "/workspace/app/backend/routers/salons.py", line 182, in create_salons
+    POST /api/v1/entities/salons
+2026-05-19 06:37:01,106 - services.database - DEBUG - [DB_OP] Starting database close
+2026-05-19 06:37:01,171 - core.database - INFO - Database connection closed and engine disposed
+2026-05-19 06:37:01,172 - services.database - INFO - Database connections closed
+2026-05-19 06:37:01,172 - services.database - DEBUG - [DB_OP] Database close completed in 0.0657s

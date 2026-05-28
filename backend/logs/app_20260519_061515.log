@@ -1,0 +1,44 @@
+2026-05-19 06:15:15,434 - main - INFO - === Logging system initialized ===
+2026-05-19 06:15:15,435 - main - INFO - Log file: logs/app_20260519_061515.log
+2026-05-19 06:15:15,435 - main - INFO - Log level: INFO
+2026-05-19 06:15:15,435 - main - INFO - Timestamp: 20260519_061515
+2026-05-19 06:15:16,320 - main - INFO - Included router: routers.aihub.router
+2026-05-19 06:15:16,343 - main - INFO - Included router: routers.auth.router
+2026-05-19 06:15:16,345 - main - INFO - Included router: routers.health.router
+2026-05-19 06:15:16,393 - main - INFO - Included router: routers.reservations.router
+2026-05-19 06:15:16,418 - main - INFO - Included router: routers.settings.router
+2026-05-19 06:15:16,457 - main - INFO - Included router: routers.storage.router
+2026-05-19 06:15:16,466 - main - INFO - Included router: routers.user.router
+2026-05-19 06:15:16,468 - main - INFO - === Application startup initiated ===
+2026-05-19 06:15:16,468 - services.database - INFO - Ignore creating tables
+2026-05-19 06:15:16,468 - services.mock_data - INFO - Ignore initialize data
+2026-05-19 06:15:16,468 - services.auth - INFO - Ignore initialize admin
+2026-05-19 06:15:16,468 - main - INFO - === Application startup completed successfully ===
+2026-05-19 06:15:19,765 - core.config - DEBUG - Read dynamic attribute jwt_secret_key from environment variable JWT_SECRET_KEY
+2026-05-19 06:15:19,765 - core.config - DEBUG - Read dynamic attribute jwt_algorithm from environment variable JWT_ALGORITHM
+2026-05-19 06:15:19,783 - core.auth - DEBUG - Authentication token validated for user hash: 3d1d0765
+2026-05-19 06:15:20,045 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-05-19 06:15:20,046 - core.database - WARNING - Database session maker not available, attempting lazy initialization...
+2026-05-19 06:15:20,046 - core.database - WARNING - Database not initialized, attempting lazy initialization...
+2026-05-19 06:15:20,046 - core.database - INFO - Starting database initialization...
+2026-05-19 06:15:20,046 - core.config - DEBUG - Read dynamic attribute database_url from environment variable DATABASE_URL
+2026-05-19 06:15:20,046 - core.database - INFO - Normalizing database URL for async compatibility...
+2026-05-19 06:15:20,048 - core.database - INFO - Creating async database engine...
+2026-05-19 06:15:20,048 - core.database - INFO - Using QueuePool with connection pooling for non-Lambda environment
+2026-05-19 06:15:20,094 - core.database - INFO - Database engine created successfully
+2026-05-19 06:15:20,095 - core.database - INFO - Creating async session maker...
+2026-05-19 06:15:20,095 - core.database - INFO - Async session maker created successfully
+2026-05-19 06:15:20,095 - core.database - INFO - Database connection initialized successfully
+2026-05-19 06:15:20,096 - core.database - DEBUG - [DB_OP] Starting create_tables
+2026-05-19 06:15:20,096 - core.database - INFO - 🔧 Starting table creation...
+2026-05-19 06:15:21,431 - core.database - INFO - Tables initialized successfully
+2026-05-19 06:15:21,431 - core.database - DEBUG - [DB_OP] Create tables completed in 1.3355s
+2026-05-19 06:15:21,493 - core.database - INFO - Lazy database initialization completed successfully
+2026-05-19 06:15:21,493 - core.database - DEBUG - [DB_OP] Database session created successfully in 1.4481s
+2026-05-19 06:15:21,494 - routers.reservations - DEBUG - Querying reservationss: query={"reservation_date__gte":"2026-05-01","reservation_date__lte":"2026-05-31"}, sort=reservation_date, skip=0, limit=200, fields=None
+2026-05-19 06:15:22,050 - routers.reservations - DEBUG - Found 0 reservationss
+2026-05-19 06:15:22,051 - core.database - DEBUG - [DB_OP] Database session cleanup after 2.0059s
+2026-05-19 06:16:02,557 - services.database - DEBUG - [DB_OP] Starting database close
+2026-05-19 06:16:02,622 - core.database - INFO - Database connection closed and engine disposed
+2026-05-19 06:16:02,622 - services.database - INFO - Database connections closed
+2026-05-19 06:16:02,622 - services.database - DEBUG - [DB_OP] Database close completed in 0.0655s

@@ -1,0 +1,69 @@
+{
+    "title": "reservations",
+    "type": "object",
+    "properties": {
+        "id": {
+            "type": "integer",
+            "description": "Primary key, auto-increment"
+        },
+        "user_id": {
+            "type": "string",
+            "description": "User ID"
+        },
+        "client_name": {
+            "type": "string",
+            "description": "Client name"
+        },
+        "client_phone": {
+            "type": "string",
+            "description": "Client phone number"
+        },
+        "client_email": {
+            "type": "string",
+            "description": "Client email address"
+        },
+        "reservation_date": {
+            "type": "string",
+            "format": "date",
+            "description": "Reservation date"
+        },
+        "reservation_time": {
+            "type": "string",
+            "description": "Reservation time"
+        },
+        "party_size": {
+            "type": "integer",
+            "description": "Number of guests"
+        },
+        "salon": {
+            "type": "string",
+            "description": "Salon/room name"
+        },
+        "notes": {
+            "type": "string",
+            "description": "Additional notes"
+        },
+        "status": {
+            "type": "string",
+            "description": "Reservation status"
+        },
+        "preference": {
+            "type": "string",
+            "description": "Dining preference"
+        },
+        "calendar_event_id": {
+            "type": "string",
+            "description": "Google Calendar event ID"
+        }
+    },
+    "required": [
+        "id",
+        "user_id",
+        "client_name",
+        "reservation_date",
+        "reservation_time",
+        "party_size",
+        "salon",
+        "status"
+    ]
+}

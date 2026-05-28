@@ -1,0 +1,44 @@
+{
+    "title": "printer_settings",
+    "type": "object",
+    "properties": {
+        "id": {
+            "type": "integer",
+            "description": "Primary key, auto-increment"
+        },
+        "user_id": {
+            "type": "string",
+            "description": "User ID"
+        },
+        "printer_type": {
+            "type": "string",
+            "description": "Type: local or printnode"
+        },
+        "printer_name": {
+            "type": "string",
+            "description": "Display name for the printer"
+        },
+        "printnode_api_key": {
+            "type": "string",
+            "description": "PrintNode API key (if type is printnode)"
+        },
+        "printnode_printer_id": {
+            "type": "string",
+            "description": "PrintNode printer ID (if type is printnode)"
+        },
+        "paper_width": {
+            "type": "integer",
+            "description": "Paper width in mm, default 80"
+        },
+        "is_default": {
+            "type": "boolean",
+            "description": "Whether this is the default printer"
+        }
+    },
+    "required": [
+        "id",
+        "user_id",
+        "printer_type",
+        "printer_name"
+    ]
+}

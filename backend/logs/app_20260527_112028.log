@@ -1,0 +1,23 @@
+2026-05-27 11:20:28,436 - main - INFO - === Logging system initialized ===
+2026-05-27 11:20:28,437 - main - INFO - Log file: logs/app_20260527_112028.log
+2026-05-27 11:20:28,437 - main - INFO - Log level: INFO
+2026-05-27 11:20:28,437 - main - INFO - Timestamp: 20260527_112028
+2026-05-27 11:20:29,234 - main - INFO - Included router: routers.aihub.router
+2026-05-27 11:20:29,258 - main - INFO - Included router: routers.auth.router
+2026-05-27 11:20:29,304 - main - INFO - Included router: routers.clients.router
+2026-05-27 11:20:29,317 - main - INFO - Included router: routers.google_calendar.router
+2026-05-27 11:20:29,319 - main - INFO - Included router: routers.health.router
+2026-05-27 11:20:29,367 - main - INFO - Included router: routers.printer_settings.router
+2026-05-27 11:20:29,437 - main - INFO - Included router: routers.reservations.router
+2026-05-27 11:20:29,481 - main - INFO - Included router: routers.salons.router
+2026-05-27 11:20:29,501 - main - INFO - Included router: routers.settings.router
+2026-05-27 11:20:29,537 - main - INFO - Included router: routers.storage.router
+2026-05-27 11:20:29,544 - main - INFO - Included router: routers.user.router
+2026-05-27 11:20:29,545 - main - INFO - === Application startup initiated ===
+2026-05-27 11:20:29,545 - services.database - INFO - Ignore creating tables
+2026-05-27 11:20:29,546 - services.mock_data - INFO - Ignore initialize data
+2026-05-27 11:20:29,546 - services.auth - INFO - Ignore initialize admin
+2026-05-27 11:20:29,546 - main - INFO - === Application startup completed successfully ===
+2026-05-27 11:20:45,286 - services.database - DEBUG - [DB_OP] Starting database close
+2026-05-27 11:20:45,286 - services.database - INFO - Database connections closed
+2026-05-27 11:20:45,286 - services.database - DEBUG - [DB_OP] Database close completed in 0.0002s

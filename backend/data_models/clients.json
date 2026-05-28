@@ -1,0 +1,31 @@
+{
+    "title": "clients",
+    "type": "object",
+    "properties": {
+        "id": {
+            "type": "integer",
+            "description": "Primary key, auto-increment"
+        },
+        "name": {
+            "type": "string",
+            "description": "Client name"
+        },
+        "phone": {
+            "type": "string",
+            "description": "Client phone number"
+        },
+        "email": {
+            "type": "string",
+            "description": "Client email address"
+        },
+        "notes": {
+            "type": "string",
+            "description": "Additional notes"
+        }
+    },
+    "required": [
+        "id",
+        "name",
+        "phone"
+    ]
+}

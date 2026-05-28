@@ -1,0 +1,695 @@
+2026-05-27 16:19:42,971 - main - INFO - === Logging system initialized ===
+2026-05-27 16:19:42,971 - main - INFO - Log file: logs/app_20260527_161942.log
+2026-05-27 16:19:42,971 - main - INFO - Log level: INFO
+2026-05-27 16:19:42,972 - main - INFO - Timestamp: 20260527_161942
+2026-05-27 16:19:43,771 - main - INFO - Included router: routers.aihub.router
+2026-05-27 16:19:43,787 - main - INFO - Included router: routers.auth.router
+2026-05-27 16:19:43,834 - main - INFO - Included router: routers.clients.router
+2026-05-27 16:19:43,848 - main - INFO - Included router: routers.google_calendar.router
+2026-05-27 16:19:43,851 - main - INFO - Included router: routers.health.router
+2026-05-27 16:19:43,920 - main - INFO - Included router: routers.printer_settings.router
+2026-05-27 16:19:44,009 - main - INFO - Included router: routers.reservations.router
+2026-05-27 16:19:44,093 - main - INFO - Included router: routers.salons.router
+2026-05-27 16:19:44,118 - main - INFO - Included router: routers.settings.router
+2026-05-27 16:19:44,160 - main - INFO - Included router: routers.storage.router
+2026-05-27 16:19:44,168 - main - INFO - Included router: routers.user.router
+2026-05-27 16:19:44,170 - main - INFO - === Application startup initiated ===
+2026-05-27 16:19:44,170 - services.database - INFO - Ignore creating tables
+2026-05-27 16:19:44,170 - services.mock_data - INFO - Ignore initialize data
+2026-05-27 16:19:44,170 - services.auth - INFO - Ignore initialize admin
+2026-05-27 16:19:44,170 - main - INFO - === Application startup completed successfully ===
+2026-05-27 16:21:37,365 - core.config - DEBUG - Read dynamic attribute jwt_secret_key from environment variable JWT_SECRET_KEY
+2026-05-27 16:21:37,365 - core.config - DEBUG - Read dynamic attribute jwt_algorithm from environment variable JWT_ALGORITHM
+2026-05-27 16:21:37,374 - core.auth - DEBUG - Authentication token validated for user hash: 3d1d0765
+2026-05-27 16:21:37,665 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-05-27 16:21:37,665 - core.database - WARNING - Database session maker not available, attempting lazy initialization...
+2026-05-27 16:21:37,665 - core.database - WARNING - Database not initialized, attempting lazy initialization...
+2026-05-27 16:21:37,665 - core.database - INFO - Starting database initialization...
+2026-05-27 16:21:37,665 - core.config - DEBUG - Read dynamic attribute database_url from environment variable DATABASE_URL
+2026-05-27 16:21:37,665 - core.database - INFO - Normalizing database URL for async compatibility...
+2026-05-27 16:21:37,666 - core.database - INFO - Creating async database engine...
+2026-05-27 16:21:37,667 - core.database - INFO - Using QueuePool with connection pooling for non-Lambda environment
+2026-05-27 16:21:37,830 - core.database - INFO - Database engine created successfully
+2026-05-27 16:21:37,831 - core.database - INFO - Creating async session maker...
+2026-05-27 16:21:37,831 - core.database - INFO - Async session maker created successfully
+2026-05-27 16:21:37,831 - core.database - INFO - Database connection initialized successfully
+2026-05-27 16:21:37,831 - core.database - DEBUG - [DB_OP] Starting create_tables
+2026-05-27 16:21:37,831 - core.database - INFO - 🔧 Starting table creation...
+2026-05-27 16:21:37,839 - core.auth - DEBUG - Authentication token validated for user hash: 3d1d0765
+2026-05-27 16:21:37,839 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-05-27 16:21:37,839 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0002s
+2026-05-27 16:21:37,840 - routers.printer_settings - DEBUG - Querying printer_settingss: query=None, sort=None, skip=0, limit=20, fields=None
+2026-05-27 16:21:39,419 - core.database - INFO - Tables initialized successfully
+2026-05-27 16:21:39,419 - core.database - DEBUG - [DB_OP] Create tables completed in 1.5879s
+2026-05-27 16:21:39,468 - routers.printer_settings - DEBUG - Found 1 printer_settingss
+2026-05-27 16:21:39,469 - core.database - DEBUG - [DB_OP] Database session cleanup after 1.6300s
+2026-05-27 16:21:39,483 - core.database - INFO - Lazy database initialization completed successfully
+2026-05-27 16:21:39,483 - core.database - DEBUG - [DB_OP] Database session created successfully in 1.8185s
+2026-05-27 16:21:39,484 - routers.reservations - DEBUG - Querying reservationss: query={"reservation_date__gte":"2026-05-01","reservation_date__lte":"2026-05-31"}, sort=reservation_date, skip=0, limit=200, fields=None
+2026-05-27 16:21:40,060 - routers.reservations - DEBUG - Found 15 reservationss
+2026-05-27 16:21:40,061 - core.database - DEBUG - [DB_OP] Database session cleanup after 2.3962s
+2026-05-27 16:22:07,663 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-05-27 16:22:07,664 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0005s
+2026-05-27 16:22:07,664 - routers.reservations - DEBUG - Querying reservationss: query={"reservation_date__gte":"2026-05-01","reservation_date__lte":"2026-05-31"}, sort=reservation_date, skip=0, limit=200, fields=None
+2026-05-27 16:22:08,236 - routers.reservations - DEBUG - Found 15 reservationss
+2026-05-27 16:22:08,237 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.5733s
+2026-05-27 16:22:37,654 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-05-27 16:22:37,654 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0006s
+2026-05-27 16:22:37,655 - routers.reservations - DEBUG - Querying reservationss: query={"reservation_date__gte":"2026-05-01","reservation_date__lte":"2026-05-31"}, sort=reservation_date, skip=0, limit=200, fields=None
+2026-05-27 16:22:38,039 - routers.reservations - DEBUG - Found 15 reservationss
+2026-05-27 16:22:38,041 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.3871s
+2026-05-27 16:22:48,039 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-05-27 16:22:48,039 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0004s
+2026-05-27 16:22:48,040 - routers.salons - DEBUG - Querying salonss: query={}, sort=None, skip=0, limit=50, fields=None
+2026-05-27 16:22:48,550 - routers.salons - DEBUG - Found 1 salonss
+2026-05-27 16:22:48,551 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.5122s
+2026-05-27 16:22:50,140 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-05-27 16:22:50,141 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0005s
+2026-05-27 16:22:50,141 - routers.clients - DEBUG - Querying clientss: query={"phone__contains":"22998006174"}, sort=name, skip=0, limit=10, fields=None
+2026-05-27 16:22:50,655 - routers.clients - DEBUG - Found 1 clientss
+2026-05-27 16:22:50,657 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.5162s
+2026-05-27 16:22:59,064 - core.auth - DEBUG - Authentication token validated for user hash: 3d1d0765
+2026-05-27 16:22:59,065 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-05-27 16:22:59,065 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0003s
+2026-05-27 16:22:59,066 - routers.reservations - DEBUG - Creating new reservations with data: client_name='Jorge Eduardo Barcelos Ottoni Guedes' client_phone='22998006174' client_email='JORGE@FORNERIAGIORGIO.COM' reservation_date=datetime.date(2026, 5, 30) reservation_time='19:00' party_size=5 salon='ANEXO' notes='' status='a confirmar' preference='Rodízio' calendar_event_id=None
+2026-05-27 16:22:59,898 - services.reservations - INFO - Created reservations with id: 17
+2026-05-27 16:22:59,899 - routers.reservations - INFO - Reservations created successfully with id: 17
+2026-05-27 16:22:59,900 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.8346s
+2026-05-27 16:23:00,098 - routers.google_calendar - INFO - Creating calendar event: Reserva - Jorge Eduardo Barcelos Ottoni Guedes
+2026-05-27 16:23:00,199 - httpcore.connection - DEBUG - connect_tcp.started host='oauth2.googleapis.com' port=443 local_address=None timeout=10.0 socket_options=None
+2026-05-27 16:23:00,225 - httpcore.connection - DEBUG - connect_tcp.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x7ff814b62ef0>
+2026-05-27 16:23:00,226 - httpcore.connection - DEBUG - start_tls.started ssl_context=<ssl.SSLContext object at 0x7ff814c92ec0> server_hostname='oauth2.googleapis.com' timeout=10.0
+2026-05-27 16:23:00,237 - httpcore.connection - DEBUG - start_tls.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x7ff8177d1db0>
+2026-05-27 16:23:00,237 - httpcore.http11 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2026-05-27 16:23:00,238 - httpcore.http11 - DEBUG - send_request_headers.complete
+2026-05-27 16:23:00,238 - httpcore.http11 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2026-05-27 16:23:00,238 - httpcore.http11 - DEBUG - send_request_body.complete
+2026-05-27 16:23:00,239 - httpcore.http11 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2026-05-27 16:23:00,323 - httpcore.http11 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Wed, 27 May 2026 23:23:00 GMT'), (b'Cache-Control', b'no-cache, no-store, max-age=0, must-revalidate'), (b'Pragma', b'no-cache'), (b'Expires', b'Mon, 01 Jan 1990 00:00:00 GMT'), (b'Content-Type', b'application/json; charset=utf-8'), (b'Vary', b'Origin'), (b'Vary', b'X-Origin'), (b'Vary', b'Referer'), (b'Content-Encoding', b'gzip'), (b'Server', b'scaffolding on HTTPServer2'), (b'X-XSS-Protection', b'0'), (b'X-Frame-Options', b'SAMEORIGIN'), (b'X-Content-Type-Options', b'nosniff'), (b'Alt-Svc', b'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'), (b'Transfer-Encoding', b'chunked')])
+2026-05-27 16:23:00,325 - httpx - INFO - HTTP Request: POST https://oauth2.googleapis.com/token "HTTP/1.1 200 OK"
+2026-05-27 16:23:00,326 - httpcore.http11 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2026-05-27 16:23:00,327 - httpcore.http11 - DEBUG - receive_response_body.complete
+2026-05-27 16:23:00,327 - httpcore.http11 - DEBUG - response_closed.started
+2026-05-27 16:23:00,328 - httpcore.http11 - DEBUG - response_closed.complete
+2026-05-27 16:23:00,328 - httpcore.connection - DEBUG - close.started
+2026-05-27 16:23:00,328 - httpcore.connection - DEBUG - close.complete
+2026-05-27 16:23:00,358 - httpcore.connection - DEBUG - connect_tcp.started host='www.googleapis.com' port=443 local_address=None timeout=15.0 socket_options=None
+2026-05-27 16:23:00,528 - httpcore.connection - DEBUG - connect_tcp.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x7ff814b635e0>
+2026-05-27 16:23:00,529 - httpcore.connection - DEBUG - start_tls.started ssl_context=<ssl.SSLContext object at 0x7ff814c90440> server_hostname='www.googleapis.com' timeout=15.0
+2026-05-27 16:23:00,712 - httpcore.connection - DEBUG - start_tls.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x7ff814b63eb0>
+2026-05-27 16:23:00,713 - httpcore.http11 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2026-05-27 16:23:00,713 - httpcore.http11 - DEBUG - send_request_headers.complete
+2026-05-27 16:23:00,713 - httpcore.http11 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2026-05-27 16:23:00,714 - httpcore.http11 - DEBUG - send_request_body.complete
+2026-05-27 16:23:00,714 - httpcore.http11 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2026-05-27 16:23:01,379 - httpcore.http11 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Cache-Control', b'no-cache, no-store, max-age=0, must-revalidate'), (b'ETag', b'"3559848362391390"'), (b'Pragma', b'no-cache'), (b'Content-Type', b'application/json; charset=UTF-8'), (b'Date', b'Wed, 27 May 2026 23:23:01 GMT'), (b'Expires', b'Mon, 01 Jan 1990 00:00:00 GMT'), (b'Vary', b'Origin'), (b'Vary', b'X-Origin'), (b'Vary', b'Referer'), (b'Content-Encoding', b'gzip'), (b'Server', b'ESF'), (b'X-XSS-Protection', b'0'), (b'X-Frame-Options', b'SAMEORIGIN'), (b'X-Content-Type-Options', b'nosniff'), (b'Alt-Svc', b'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'), (b'x-l2-request-path', b'l2-managed-14'), (b'Transfer-Encoding', b'chunked')])
+2026-05-27 16:23:01,380 - httpx - INFO - HTTP Request: POST https://www.googleapis.com/calendar/v3/calendars/primary/events?sendUpdates=all "HTTP/1.1 200 OK"
+2026-05-27 16:23:01,380 - httpcore.http11 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2026-05-27 16:23:01,380 - httpcore.http11 - DEBUG - receive_response_body.complete
+2026-05-27 16:23:01,381 - httpcore.http11 - DEBUG - response_closed.started
+2026-05-27 16:23:01,381 - httpcore.http11 - DEBUG - response_closed.complete
+2026-05-27 16:23:01,381 - httpcore.connection - DEBUG - close.started
+2026-05-27 16:23:01,381 - httpcore.connection - DEBUG - close.complete
+2026-05-27 16:23:01,381 - routers.google_calendar - INFO - Calendar event created: 2u2e0vpude0n13jvm480a50m6k
+2026-05-27 16:23:01,575 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-05-27 16:23:01,576 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0006s
+2026-05-27 16:23:01,577 - routers.reservations - DEBUG - Updating reservations (all) 17 with data: client_name=None client_phone=None client_email=None reservation_date=None reservation_time=None party_size=None salon=None notes=None status=None preference=None calendar_event_id='2u2e0vpude0n13jvm480a50m6k'
+2026-05-27 16:23:02,471 - services.reservations - INFO - Updated reservations 17
+2026-05-27 16:23:02,472 - routers.reservations - INFO - Reservations 17 updated successfully (all)
+2026-05-27 16:23:02,473 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.8971s
+2026-05-27 16:23:02,673 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-05-27 16:23:02,674 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0007s
+2026-05-27 16:23:02,674 - routers.clients - DEBUG - Querying clientss: query={"phone":"22998006174"}, sort=None, skip=0, limit=1, fields=None
+2026-05-27 16:23:03,189 - routers.clients - DEBUG - Found 1 clientss
+2026-05-27 16:23:03,190 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.5171s
+2026-05-27 16:23:03,505 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-05-27 16:23:03,505 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0005s
+2026-05-27 16:23:03,506 - routers.reservations - DEBUG - Querying reservationss: query={}, sort=-reservation_date, skip=0, limit=100, fields=None
+2026-05-27 16:23:04,081 - routers.reservations - DEBUG - Found 16 reservationss
+2026-05-27 16:23:04,083 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.5777s
+2026-05-27 16:23:43,451 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-05-27 16:23:43,452 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0010s
+2026-05-27 16:23:43,452 - routers.salons - DEBUG - Querying salonss: query={}, sort=None, skip=0, limit=50, fields=None
+2026-05-27 16:23:43,455 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-05-27 16:23:43,455 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0002s
+2026-05-27 16:23:43,455 - routers.reservations - DEBUG - Fetching reservations (all) with id: 17, fields=None
+2026-05-27 16:23:43,772 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.3169s
+2026-05-27 16:23:43,834 - routers.salons - DEBUG - Found 1 salonss
+2026-05-27 16:23:43,835 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.3843s
+2026-05-27 16:23:46,513 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-05-27 16:23:46,513 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0005s
+2026-05-27 16:23:46,514 - routers.reservations - DEBUG - Querying reservationss: query={}, sort=-reservation_date, skip=0, limit=100, fields=None
+2026-05-27 16:23:46,896 - routers.reservations - DEBUG - Found 16 reservationss
+2026-05-27 16:23:46,897 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.3843s
+2026-05-27 16:23:49,264 - core.auth - DEBUG - Authentication token validated for user hash: 3d1d0765
+2026-05-27 16:23:49,265 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-05-27 16:23:49,266 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0007s
+2026-05-27 16:23:49,266 - routers.reservations - DEBUG - Updating reservations 17 with data: client_name=None client_phone=None client_email=None reservation_date=None reservation_time=None party_size=None salon=None notes=None status='cancelada' preference=None calendar_event_id=None
+2026-05-27 16:23:50,157 - services.reservations - INFO - Updated reservations 17
+2026-05-27 16:23:50,158 - routers.reservations - INFO - Reservations 17 updated successfully
+2026-05-27 16:23:50,159 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.8934s
+2026-05-27 16:23:50,363 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-05-27 16:23:50,363 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0004s
+2026-05-27 16:23:50,364 - routers.reservations - DEBUG - Querying reservationss: query={}, sort=-reservation_date, skip=0, limit=100, fields=None
+2026-05-27 16:23:50,871 - routers.reservations - DEBUG - Found 16 reservationss
+2026-05-27 16:23:50,873 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.5102s
+2026-05-27 16:25:02,466 - core.auth - DEBUG - Authentication token validated for user hash: 3d1d0765
+2026-05-27 16:25:02,467 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-05-27 16:25:02,468 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0006s
+2026-05-27 16:25:02,468 - routers.reservations - DEBUG - Updating reservations 10 with data: client_name=None client_phone=None client_email=None reservation_date=None reservation_time=None party_size=None salon=None notes=None status='cancelada' preference=None calendar_event_id=None
+2026-05-27 16:25:03,358 - services.reservations - INFO - Updated reservations 10
+2026-05-27 16:25:03,359 - routers.reservations - INFO - Reservations 10 updated successfully
+2026-05-27 16:25:03,359 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.8923s
+2026-05-27 16:25:03,562 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-05-27 16:25:03,562 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0004s
+2026-05-27 16:25:03,562 - routers.reservations - DEBUG - Querying reservationss: query={}, sort=-reservation_date, skip=0, limit=100, fields=None
+2026-05-27 16:25:03,944 - routers.reservations - DEBUG - Found 16 reservationss
+2026-05-27 16:25:03,945 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.3834s
+2026-05-27 16:25:10,267 - core.auth - DEBUG - Authentication token validated for user hash: 3d1d0765
+2026-05-27 16:25:10,268 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-05-27 16:25:10,268 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0002s
+2026-05-27 16:25:10,268 - routers.reservations - DEBUG - Updating reservations 15 with data: client_name=None client_phone=None client_email=None reservation_date=None reservation_time=None party_size=None salon=None notes=None status='cancelada' preference=None calendar_event_id=None
+2026-05-27 16:25:11,030 - services.reservations - INFO - Updated reservations 15
+2026-05-27 16:25:11,030 - routers.reservations - INFO - Reservations 15 updated successfully
+2026-05-27 16:25:11,031 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.7631s
+2026-05-27 16:25:11,239 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-05-27 16:25:11,239 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0008s
+2026-05-27 16:25:11,240 - routers.reservations - DEBUG - Querying reservationss: query={}, sort=-reservation_date, skip=0, limit=100, fields=None
+2026-05-27 16:25:11,682 - routers.reservations - DEBUG - Found 16 reservationss
+2026-05-27 16:25:11,683 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.4445s
+2026-05-27 16:25:13,237 - core.auth - DEBUG - Authentication token validated for user hash: 3d1d0765
+2026-05-27 16:25:13,238 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-05-27 16:25:13,238 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0002s
+2026-05-27 16:25:13,239 - routers.reservations - DEBUG - Updating reservations 16 with data: client_name=None client_phone=None client_email=None reservation_date=None reservation_time=None party_size=None salon=None notes=None status='cancelada' preference=None calendar_event_id=None
+2026-05-27 16:25:14,001 - services.reservations - INFO - Updated reservations 16
+2026-05-27 16:25:14,002 - routers.reservations - INFO - Reservations 16 updated successfully
+2026-05-27 16:25:14,002 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.7644s
+2026-05-27 16:25:14,211 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-05-27 16:25:14,212 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0005s
+2026-05-27 16:25:14,212 - routers.reservations - DEBUG - Querying reservationss: query={}, sort=-reservation_date, skip=0, limit=100, fields=None
+2026-05-27 16:25:14,595 - routers.reservations - DEBUG - Found 16 reservationss
+2026-05-27 16:25:14,597 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.3859s
+2026-05-27 16:25:17,590 - core.auth - DEBUG - Authentication token validated for user hash: 3d1d0765
+2026-05-27 16:25:17,591 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-05-27 16:25:17,591 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0002s
+2026-05-27 16:25:17,591 - routers.reservations - DEBUG - Updating reservations 8 with data: client_name=None client_phone=None client_email=None reservation_date=None reservation_time=None party_size=None salon=None notes=None status='cancelada' preference=None calendar_event_id=None
+2026-05-27 16:25:18,352 - services.reservations - INFO - Updated reservations 8
+2026-05-27 16:25:18,353 - routers.reservations - INFO - Reservations 8 updated successfully
+2026-05-27 16:25:18,353 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.7626s
+2026-05-27 16:25:18,560 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-05-27 16:25:18,560 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0005s
+2026-05-27 16:25:18,561 - routers.reservations - DEBUG - Querying reservationss: query={}, sort=-reservation_date, skip=0, limit=100, fields=None
+2026-05-27 16:25:18,942 - routers.reservations - DEBUG - Found 16 reservationss
+2026-05-27 16:25:18,943 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.3834s
+2026-05-27 16:25:21,295 - core.auth - DEBUG - Authentication token validated for user hash: 3d1d0765
+2026-05-27 16:25:21,296 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-05-27 16:25:21,296 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0002s
+2026-05-27 16:25:21,296 - routers.reservations - DEBUG - Updating reservations 13 with data: client_name=None client_phone=None client_email=None reservation_date=None reservation_time=None party_size=None salon=None notes=None status='cancelada' preference=None calendar_event_id=None
+2026-05-27 16:25:22,059 - services.reservations - INFO - Updated reservations 13
+2026-05-27 16:25:22,060 - routers.reservations - INFO - Reservations 13 updated successfully
+2026-05-27 16:25:22,060 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.7645s
+2026-05-27 16:25:22,264 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-05-27 16:25:22,264 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0004s
+2026-05-27 16:25:22,265 - routers.reservations - DEBUG - Querying reservationss: query={}, sort=-reservation_date, skip=0, limit=100, fields=None
+2026-05-27 16:25:22,646 - routers.reservations - DEBUG - Found 16 reservationss
+2026-05-27 16:25:22,647 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.3834s
+2026-05-27 16:25:25,242 - core.auth - DEBUG - Authentication token validated for user hash: 3d1d0765
+2026-05-27 16:25:25,243 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-05-27 16:25:25,243 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0002s
+2026-05-27 16:25:25,243 - routers.reservations - DEBUG - Updating reservations 14 with data: client_name=None client_phone=None client_email=None reservation_date=None reservation_time=None party_size=None salon=None notes=None status='cancelada' preference=None calendar_event_id=None
+2026-05-27 16:25:26,008 - services.reservations - INFO - Updated reservations 14
+2026-05-27 16:25:26,008 - routers.reservations - INFO - Reservations 14 updated successfully
+2026-05-27 16:25:26,010 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.7670s
+2026-05-27 16:25:26,220 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-05-27 16:25:26,221 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0004s
+2026-05-27 16:25:26,221 - routers.reservations - DEBUG - Querying reservationss: query={}, sort=-reservation_date, skip=0, limit=100, fields=None
+2026-05-27 16:25:26,602 - routers.reservations - DEBUG - Found 16 reservationss
+2026-05-27 16:25:26,603 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.3830s
+2026-05-27 16:25:29,042 - core.auth - DEBUG - Authentication token validated for user hash: 3d1d0765
+2026-05-27 16:25:29,043 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-05-27 16:25:29,043 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0002s
+2026-05-27 16:25:29,043 - routers.reservations - DEBUG - Updating reservations 12 with data: client_name=None client_phone=None client_email=None reservation_date=None reservation_time=None party_size=None salon=None notes=None status='cancelada' preference=None calendar_event_id=None
+2026-05-27 16:25:29,805 - services.reservations - INFO - Updated reservations 12
+2026-05-27 16:25:29,805 - routers.reservations - INFO - Reservations 12 updated successfully
+2026-05-27 16:25:29,806 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.7628s
+2026-05-27 16:25:30,005 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-05-27 16:25:30,006 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0005s
+2026-05-27 16:25:30,006 - routers.reservations - DEBUG - Querying reservationss: query={}, sort=-reservation_date, skip=0, limit=100, fields=None
+2026-05-27 16:25:30,387 - routers.reservations - DEBUG - Found 16 reservationss
+2026-05-27 16:25:30,389 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.3835s
+2026-05-27 16:25:32,779 - core.auth - DEBUG - Authentication token validated for user hash: 3d1d0765
+2026-05-27 16:25:32,779 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-05-27 16:25:32,779 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0002s
+2026-05-27 16:25:32,780 - routers.reservations - DEBUG - Updating reservations 11 with data: client_name=None client_phone=None client_email=None reservation_date=None reservation_time=None party_size=None salon=None notes=None status='cancelada' preference=None calendar_event_id=None
+2026-05-27 16:25:33,543 - services.reservations - INFO - Updated reservations 11
+2026-05-27 16:25:33,543 - routers.reservations - INFO - Reservations 11 updated successfully
+2026-05-27 16:25:33,544 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.7648s
+2026-05-27 16:25:33,774 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-05-27 16:25:33,774 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0004s
+2026-05-27 16:25:33,775 - routers.reservations - DEBUG - Querying reservationss: query={}, sort=-reservation_date, skip=0, limit=100, fields=None
+2026-05-27 16:25:34,156 - routers.reservations - DEBUG - Found 16 reservationss
+2026-05-27 16:25:34,157 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.3833s
+2026-05-27 16:25:36,538 - core.auth - DEBUG - Authentication token validated for user hash: 3d1d0765
+2026-05-27 16:25:36,539 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-05-27 16:25:36,539 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0003s
+2026-05-27 16:25:36,539 - routers.reservations - DEBUG - Updating reservations 9 with data: client_name=None client_phone=None client_email=None reservation_date=None reservation_time=None party_size=None salon=None notes=None status='cancelada' preference=None calendar_event_id=None
+2026-05-27 16:25:37,301 - services.reservations - INFO - Updated reservations 9
+2026-05-27 16:25:37,302 - routers.reservations - INFO - Reservations 9 updated successfully
+2026-05-27 16:25:37,302 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.7638s
+2026-05-27 16:25:37,502 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-05-27 16:25:37,503 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0006s
+2026-05-27 16:25:37,503 - routers.reservations - DEBUG - Querying reservationss: query={}, sort=-reservation_date, skip=0, limit=100, fields=None
+2026-05-27 16:25:37,885 - routers.reservations - DEBUG - Found 16 reservationss
+2026-05-27 16:25:37,886 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.3835s
+2026-05-27 16:28:27,401 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-05-27 16:28:27,402 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0005s
+2026-05-27 16:28:27,402 - routers.salons - DEBUG - Querying salonss: query={}, sort=None, skip=0, limit=50, fields=None
+2026-05-27 16:28:27,908 - routers.salons - DEBUG - Found 1 salonss
+2026-05-27 16:28:27,909 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.5079s
+2026-05-27 16:28:32,117 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-05-27 16:28:32,118 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0006s
+2026-05-27 16:28:32,119 - routers.clients - DEBUG - Querying clientss: query={"name__contains":"marc"}, sort=name, skip=0, limit=10, fields=None
+2026-05-27 16:28:32,759 - routers.clients - DEBUG - Found 0 clientss
+2026-05-27 16:28:32,759 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.6421s
+2026-05-27 16:28:32,941 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-05-27 16:28:32,942 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0004s
+2026-05-27 16:28:32,942 - routers.clients - DEBUG - Querying clientss: query={"name__contains":"marcio"}, sort=name, skip=0, limit=10, fields=None
+2026-05-27 16:28:33,448 - routers.clients - DEBUG - Found 0 clientss
+2026-05-27 16:28:33,449 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.5076s
+2026-05-27 16:28:34,269 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-05-27 16:28:34,270 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0004s
+2026-05-27 16:28:34,270 - routers.clients - DEBUG - Querying clientss: query={"phone__contains":"22"}, sort=name, skip=0, limit=10, fields=None
+2026-05-27 16:28:34,654 - routers.clients - DEBUG - Found 1 clientss
+2026-05-27 16:28:34,655 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.3857s
+2026-05-27 16:28:34,883 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-05-27 16:28:34,884 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0006s
+2026-05-27 16:28:34,884 - routers.clients - DEBUG - Querying clientss: query={"phone__contains":"229"}, sort=name, skip=0, limit=10, fields=None
+2026-05-27 16:28:35,147 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-05-27 16:28:35,148 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0008s
+2026-05-27 16:28:35,149 - routers.clients - DEBUG - Querying clientss: query={"phone__contains":"2298"}, sort=name, skip=0, limit=10, fields=None
+2026-05-27 16:28:35,393 - routers.clients - DEBUG - Found 1 clientss
+2026-05-27 16:28:35,394 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.5107s
+2026-05-27 16:28:35,529 - routers.clients - DEBUG - Found 0 clientss
+2026-05-27 16:28:35,530 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.3828s
+2026-05-27 16:28:35,759 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-05-27 16:28:35,760 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0004s
+2026-05-27 16:28:35,760 - routers.clients - DEBUG - Querying clientss: query={"phone__contains":"229852"}, sort=name, skip=0, limit=10, fields=None
+2026-05-27 16:28:36,101 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-05-27 16:28:36,101 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0003s
+2026-05-27 16:28:36,102 - routers.clients - DEBUG - Querying clientss: query={"phone__contains":"2298521"}, sort=name, skip=0, limit=10, fields=None
+2026-05-27 16:28:36,140 - routers.clients - DEBUG - Found 0 clientss
+2026-05-27 16:28:36,141 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.3814s
+2026-05-27 16:28:36,483 - routers.clients - DEBUG - Found 0 clientss
+2026-05-27 16:28:36,484 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.3833s
+2026-05-27 16:28:36,947 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-05-27 16:28:36,948 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0008s
+2026-05-27 16:28:36,949 - routers.clients - DEBUG - Querying clientss: query={"phone__contains":"2298521000"}, sort=name, skip=0, limit=10, fields=None
+2026-05-27 16:28:37,330 - routers.clients - DEBUG - Found 0 clientss
+2026-05-27 16:28:37,331 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.3835s
+2026-05-27 16:28:37,506 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-05-27 16:28:37,507 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0004s
+2026-05-27 16:28:37,507 - routers.clients - DEBUG - Querying clientss: query={"phone__contains":"22985210000"}, sort=name, skip=0, limit=10, fields=None
+2026-05-27 16:28:37,889 - routers.clients - DEBUG - Found 0 clientss
+2026-05-27 16:28:37,890 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.3838s
+2026-05-27 16:29:05,207 - core.auth - DEBUG - Authentication token validated for user hash: 3d1d0765
+2026-05-27 16:29:05,207 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-05-27 16:29:05,208 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0002s
+2026-05-27 16:29:05,208 - routers.reservations - DEBUG - Creating new reservations with data: client_name='marcio' client_phone='22985210000' client_email='' reservation_date=datetime.date(2026, 5, 31) reservation_time='19:00' party_size=5 salon='ANEXO' notes='' status='a confirmar' preference='Rodízio' calendar_event_id=None
+2026-05-27 16:29:05,907 - services.reservations - INFO - Created reservations with id: 18
+2026-05-27 16:29:05,908 - routers.reservations - INFO - Reservations created successfully with id: 18
+2026-05-27 16:29:05,908 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.7010s
+2026-05-27 16:29:06,118 - routers.google_calendar - INFO - Creating calendar event: Reserva - marcio
+2026-05-27 16:29:06,145 - httpcore.connection - DEBUG - connect_tcp.started host='oauth2.googleapis.com' port=443 local_address=None timeout=10.0 socket_options=None
+2026-05-27 16:29:06,170 - httpcore.connection - DEBUG - connect_tcp.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x7ff814bf41c0>
+2026-05-27 16:29:06,171 - httpcore.connection - DEBUG - start_tls.started ssl_context=<ssl.SSLContext object at 0x7ff814b37d40> server_hostname='oauth2.googleapis.com' timeout=10.0
+2026-05-27 16:29:06,181 - httpcore.connection - DEBUG - start_tls.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x7ff8177d2f20>
+2026-05-27 16:29:06,182 - httpcore.http11 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2026-05-27 16:29:06,183 - httpcore.http11 - DEBUG - send_request_headers.complete
+2026-05-27 16:29:06,183 - httpcore.http11 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2026-05-27 16:29:06,184 - httpcore.http11 - DEBUG - send_request_body.complete
+2026-05-27 16:29:06,184 - httpcore.http11 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2026-05-27 16:29:06,260 - httpcore.http11 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Expires', b'Mon, 01 Jan 1990 00:00:00 GMT'), (b'Date', b'Wed, 27 May 2026 23:29:06 GMT'), (b'Pragma', b'no-cache'), (b'Cache-Control', b'no-cache, no-store, max-age=0, must-revalidate'), (b'Content-Type', b'application/json; charset=utf-8'), (b'Vary', b'Origin'), (b'Vary', b'X-Origin'), (b'Vary', b'Referer'), (b'Content-Encoding', b'gzip'), (b'Server', b'scaffolding on HTTPServer2'), (b'X-XSS-Protection', b'0'), (b'X-Frame-Options', b'SAMEORIGIN'), (b'X-Content-Type-Options', b'nosniff'), (b'Alt-Svc', b'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'), (b'Transfer-Encoding', b'chunked')])
+2026-05-27 16:29:06,260 - httpx - INFO - HTTP Request: POST https://oauth2.googleapis.com/token "HTTP/1.1 200 OK"
+2026-05-27 16:29:06,260 - httpcore.http11 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2026-05-27 16:29:06,261 - httpcore.http11 - DEBUG - receive_response_body.complete
+2026-05-27 16:29:06,261 - httpcore.http11 - DEBUG - response_closed.started
+2026-05-27 16:29:06,261 - httpcore.http11 - DEBUG - response_closed.complete
+2026-05-27 16:29:06,262 - httpcore.connection - DEBUG - close.started
+2026-05-27 16:29:06,263 - httpcore.connection - DEBUG - close.complete
+2026-05-27 16:29:06,286 - httpcore.connection - DEBUG - connect_tcp.started host='www.googleapis.com' port=443 local_address=None timeout=15.0 socket_options=None
+2026-05-27 16:29:06,457 - httpcore.connection - DEBUG - connect_tcp.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x7ff814bf62c0>
+2026-05-27 16:29:06,457 - httpcore.connection - DEBUG - start_tls.started ssl_context=<ssl.SSLContext object at 0x7ff814b37bc0> server_hostname='www.googleapis.com' timeout=15.0
+2026-05-27 16:29:06,642 - httpcore.connection - DEBUG - start_tls.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x7ff814bf6050>
+2026-05-27 16:29:06,643 - httpcore.http11 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2026-05-27 16:29:06,643 - httpcore.http11 - DEBUG - send_request_headers.complete
+2026-05-27 16:29:06,643 - httpcore.http11 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2026-05-27 16:29:06,643 - httpcore.http11 - DEBUG - send_request_body.complete
+2026-05-27 16:29:06,644 - httpcore.http11 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2026-05-27 16:29:07,264 - httpcore.http11 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Pragma', b'no-cache'), (b'Cache-Control', b'no-cache, no-store, max-age=0, must-revalidate'), (b'Expires', b'Mon, 01 Jan 1990 00:00:00 GMT'), (b'Content-Type', b'application/json; charset=UTF-8'), (b'Date', b'Wed, 27 May 2026 23:29:07 GMT'), (b'ETag', b'"3559849094127358"'), (b'Vary', b'Origin'), (b'Vary', b'X-Origin'), (b'Vary', b'Referer'), (b'Content-Encoding', b'gzip'), (b'Server', b'ESF'), (b'X-XSS-Protection', b'0'), (b'X-Frame-Options', b'SAMEORIGIN'), (b'X-Content-Type-Options', b'nosniff'), (b'Alt-Svc', b'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'), (b'x-l2-request-path', b'l2-managed-14'), (b'Transfer-Encoding', b'chunked')])
+2026-05-27 16:29:07,265 - httpx - INFO - HTTP Request: POST https://www.googleapis.com/calendar/v3/calendars/primary/events?sendUpdates=all "HTTP/1.1 200 OK"
+2026-05-27 16:29:07,265 - httpcore.http11 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2026-05-27 16:29:07,266 - httpcore.http11 - DEBUG - receive_response_body.complete
+2026-05-27 16:29:07,266 - httpcore.http11 - DEBUG - response_closed.started
+2026-05-27 16:29:07,266 - httpcore.http11 - DEBUG - response_closed.complete
+2026-05-27 16:29:07,267 - httpcore.connection - DEBUG - close.started
+2026-05-27 16:29:07,267 - httpcore.connection - DEBUG - close.complete
+2026-05-27 16:29:07,267 - routers.google_calendar - INFO - Calendar event created: ami7aucnhiro1snv17j6odvnk8
+2026-05-27 16:29:07,471 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-05-27 16:29:07,471 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0005s
+2026-05-27 16:29:07,471 - routers.reservations - DEBUG - Updating reservations (all) 18 with data: client_name=None client_phone=None client_email=None reservation_date=None reservation_time=None party_size=None salon=None notes=None status=None preference=None calendar_event_id='ami7aucnhiro1snv17j6odvnk8'
+2026-05-27 16:29:08,233 - services.reservations - INFO - Updated reservations 18
+2026-05-27 16:29:08,234 - routers.reservations - INFO - Reservations 18 updated successfully (all)
+2026-05-27 16:29:08,234 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.7638s
+2026-05-27 16:29:08,443 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-05-27 16:29:08,443 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0005s
+2026-05-27 16:29:08,444 - routers.clients - DEBUG - Querying clientss: query={"phone":"22985210000"}, sort=None, skip=0, limit=1, fields=None
+2026-05-27 16:29:08,825 - routers.clients - DEBUG - Found 0 clientss
+2026-05-27 16:29:08,826 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.3833s
+2026-05-27 16:29:09,038 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-05-27 16:29:09,038 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0004s
+2026-05-27 16:29:09,038 - routers.clients - DEBUG - Creating new clients with data: name='marcio' phone='22985210000' email=None notes=''
+2026-05-27 16:29:09,962 - services.clients - INFO - Created clients with id: 2
+2026-05-27 16:29:09,963 - routers.clients - INFO - Clients created successfully with id: 2
+2026-05-27 16:29:09,963 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.9259s
+2026-05-27 16:29:10,201 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-05-27 16:29:10,201 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0005s
+2026-05-27 16:29:10,202 - routers.reservations - DEBUG - Querying reservationss: query={}, sort=-reservation_date, skip=0, limit=100, fields=None
+2026-05-27 16:29:10,584 - routers.reservations - DEBUG - Found 17 reservationss
+2026-05-27 16:29:10,585 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.3844s
+2026-05-27 16:29:49,071 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-05-27 16:29:49,072 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0005s
+2026-05-27 16:29:49,072 - routers.salons - DEBUG - Querying salonss: query={}, sort=None, skip=0, limit=50, fields=None
+2026-05-27 16:29:49,073 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-05-27 16:29:49,074 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0002s
+2026-05-27 16:29:49,074 - routers.reservations - DEBUG - Fetching reservations (all) with id: 18, fields=None
+2026-05-27 16:29:49,392 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.3190s
+2026-05-27 16:29:49,455 - routers.salons - DEBUG - Found 1 salonss
+2026-05-27 16:29:49,456 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.3846s
+2026-05-27 16:29:51,712 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-05-27 16:29:51,713 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0006s
+2026-05-27 16:29:51,713 - routers.clients - DEBUG - Querying clientss: query={"name__contains":"marcio "}, sort=name, skip=0, limit=10, fields=None
+2026-05-27 16:29:52,099 - routers.clients - DEBUG - Found 0 clientss
+2026-05-27 16:29:52,100 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.3878s
+2026-05-27 16:29:52,942 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-05-27 16:29:52,943 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0005s
+2026-05-27 16:29:52,943 - routers.clients - DEBUG - Querying clientss: query={"name__contains":"marcio sant"}, sort=name, skip=0, limit=10, fields=None
+2026-05-27 16:29:53,325 - routers.clients - DEBUG - Found 0 clientss
+2026-05-27 16:29:53,326 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.3833s
+2026-05-27 16:29:53,466 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-05-27 16:29:53,467 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0007s
+2026-05-27 16:29:53,467 - routers.clients - DEBUG - Querying clientss: query={"name__contains":"marcio santos"}, sort=name, skip=0, limit=10, fields=None
+2026-05-27 16:29:53,851 - routers.clients - DEBUG - Found 0 clientss
+2026-05-27 16:29:53,851 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.3852s
+2026-05-27 16:29:55,524 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-05-27 16:29:55,524 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0005s
+2026-05-27 16:29:55,524 - routers.reservations - DEBUG - Updating reservations (all) 18 with data: client_name='marcio santos' client_phone='22985210000' client_email='' reservation_date=datetime.date(2026, 5, 31) reservation_time='19:00' party_size=5 salon='ANEXO' notes='' status='a confirmar' preference='Rodízio' calendar_event_id=None
+2026-05-27 16:29:56,350 - services.reservations - INFO - Updated reservations 18
+2026-05-27 16:29:56,350 - routers.reservations - INFO - Reservations 18 updated successfully (all)
+2026-05-27 16:29:56,351 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.8275s
+2026-05-27 16:29:56,568 - routers.google_calendar - INFO - Updating calendar event: ami7aucnhiro1snv17j6odvnk8
+2026-05-27 16:29:56,600 - httpcore.connection - DEBUG - connect_tcp.started host='oauth2.googleapis.com' port=443 local_address=None timeout=10.0 socket_options=None
+2026-05-27 16:29:56,624 - httpcore.connection - DEBUG - connect_tcp.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x7ff814bf6f50>
+2026-05-27 16:29:56,624 - httpcore.connection - DEBUG - start_tls.started ssl_context=<ssl.SSLContext object at 0x7ff814b37bc0> server_hostname='oauth2.googleapis.com' timeout=10.0
+2026-05-27 16:29:56,633 - httpcore.connection - DEBUG - start_tls.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x7ff814b63820>
+2026-05-27 16:29:56,634 - httpcore.http11 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2026-05-27 16:29:56,634 - httpcore.http11 - DEBUG - send_request_headers.complete
+2026-05-27 16:29:56,635 - httpcore.http11 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2026-05-27 16:29:56,635 - httpcore.http11 - DEBUG - send_request_body.complete
+2026-05-27 16:29:56,635 - httpcore.http11 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2026-05-27 16:29:56,714 - httpcore.http11 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Cache-Control', b'no-cache, no-store, max-age=0, must-revalidate'), (b'Pragma', b'no-cache'), (b'Expires', b'Mon, 01 Jan 1990 00:00:00 GMT'), (b'Date', b'Wed, 27 May 2026 23:29:56 GMT'), (b'Content-Type', b'application/json; charset=utf-8'), (b'Vary', b'Origin'), (b'Vary', b'X-Origin'), (b'Vary', b'Referer'), (b'Content-Encoding', b'gzip'), (b'Server', b'scaffolding on HTTPServer2'), (b'X-XSS-Protection', b'0'), (b'X-Frame-Options', b'SAMEORIGIN'), (b'X-Content-Type-Options', b'nosniff'), (b'Alt-Svc', b'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'), (b'Transfer-Encoding', b'chunked')])
+2026-05-27 16:29:56,715 - httpx - INFO - HTTP Request: POST https://oauth2.googleapis.com/token "HTTP/1.1 200 OK"
+2026-05-27 16:29:56,715 - httpcore.http11 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2026-05-27 16:29:56,716 - httpcore.http11 - DEBUG - receive_response_body.complete
+2026-05-27 16:29:56,716 - httpcore.http11 - DEBUG - response_closed.started
+2026-05-27 16:29:56,716 - httpcore.http11 - DEBUG - response_closed.complete
+2026-05-27 16:29:56,717 - httpcore.connection - DEBUG - close.started
+2026-05-27 16:29:56,717 - httpcore.connection - DEBUG - close.complete
+2026-05-27 16:29:56,742 - httpcore.connection - DEBUG - connect_tcp.started host='www.googleapis.com' port=443 local_address=None timeout=15.0 socket_options=None
+2026-05-27 16:29:56,929 - httpcore.connection - DEBUG - connect_tcp.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x7ff814bf4cd0>
+2026-05-27 16:29:56,929 - httpcore.connection - DEBUG - start_tls.started ssl_context=<ssl.SSLContext object at 0x7ff814be86c0> server_hostname='www.googleapis.com' timeout=15.0
+2026-05-27 16:29:57,115 - httpcore.connection - DEBUG - start_tls.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x7ff814bf58d0>
+2026-05-27 16:29:57,116 - httpcore.http11 - DEBUG - send_request_headers.started request=<Request [b'PATCH']>
+2026-05-27 16:29:57,116 - httpcore.http11 - DEBUG - send_request_headers.complete
+2026-05-27 16:29:57,116 - httpcore.http11 - DEBUG - send_request_body.started request=<Request [b'PATCH']>
+2026-05-27 16:29:57,117 - httpcore.http11 - DEBUG - send_request_body.complete
+2026-05-27 16:29:57,117 - httpcore.http11 - DEBUG - receive_response_headers.started request=<Request [b'PATCH']>
+2026-05-27 16:29:57,759 - httpcore.http11 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Content-Type', b'application/json; charset=UTF-8'), (b'ETag', b'"3559849195143198"'), (b'Cache-Control', b'no-cache, no-store, max-age=0, must-revalidate'), (b'Vary', b'Origin,X-Origin,Referer'), (b'Date', b'Wed, 27 May 2026 23:29:57 GMT'), (b'Pragma', b'no-cache'), (b'Expires', b'Mon, 01 Jan 1990 00:00:00 GMT'), (b'Content-Encoding', b'gzip'), (b'Server', b'ESF'), (b'X-XSS-Protection', b'0'), (b'X-Frame-Options', b'SAMEORIGIN'), (b'X-Content-Type-Options', b'nosniff'), (b'Alt-Svc', b'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'), (b'x-l2-request-path', b'l2-managed-14'), (b'Transfer-Encoding', b'chunked')])
+2026-05-27 16:29:57,760 - httpx - INFO - HTTP Request: PATCH https://www.googleapis.com/calendar/v3/calendars/primary/events/ami7aucnhiro1snv17j6odvnk8?sendUpdates=all "HTTP/1.1 200 OK"
+2026-05-27 16:29:57,760 - httpcore.http11 - DEBUG - receive_response_body.started request=<Request [b'PATCH']>
+2026-05-27 16:29:57,761 - httpcore.http11 - DEBUG - receive_response_body.complete
+2026-05-27 16:29:57,761 - httpcore.http11 - DEBUG - response_closed.started
+2026-05-27 16:29:57,761 - httpcore.http11 - DEBUG - response_closed.complete
+2026-05-27 16:29:57,762 - httpcore.connection - DEBUG - close.started
+2026-05-27 16:29:57,762 - httpcore.connection - DEBUG - close.complete
+2026-05-27 16:29:57,762 - routers.google_calendar - INFO - Calendar event updated: ami7aucnhiro1snv17j6odvnk8
+2026-05-27 16:29:57,974 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-05-27 16:29:57,975 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0005s
+2026-05-27 16:29:57,975 - routers.clients - DEBUG - Querying clientss: query={"phone":"22985210000"}, sort=None, skip=0, limit=1, fields=None
+2026-05-27 16:29:58,355 - routers.clients - DEBUG - Found 1 clientss
+2026-05-27 16:29:58,356 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.3817s
+2026-05-27 16:29:58,577 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-05-27 16:29:58,578 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0004s
+2026-05-27 16:29:58,578 - routers.clients - DEBUG - Updating clients (all) 2 with data: name='marcio santos' phone='22985210000' email=None notes=''
+2026-05-27 16:29:59,472 - services.clients - INFO - Updated clients 2
+2026-05-27 16:29:59,472 - routers.clients - INFO - Clients 2 updated successfully (all)
+2026-05-27 16:29:59,473 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.8959s
+2026-05-27 16:29:59,700 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-05-27 16:29:59,700 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0005s
+2026-05-27 16:29:59,701 - routers.reservations - DEBUG - Querying reservationss: query={}, sort=-reservation_date, skip=0, limit=100, fields=None
+2026-05-27 16:30:00,082 - routers.reservations - DEBUG - Found 17 reservationss
+2026-05-27 16:30:00,084 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.3837s
+2026-05-27 16:30:25,055 - core.auth - DEBUG - Authentication token validated for user hash: 3d1d0765
+2026-05-27 16:30:25,056 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-05-27 16:30:25,056 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0002s
+2026-05-27 16:30:25,056 - routers.reservations - DEBUG - Updating reservations 18 with data: client_name=None client_phone=None client_email=None reservation_date=None reservation_time=None party_size=None salon=None notes=None status='cancelada' preference=None calendar_event_id=None
+2026-05-27 16:30:25,818 - services.reservations - INFO - Updated reservations 18
+2026-05-27 16:30:25,819 - routers.reservations - INFO - Reservations 18 updated successfully
+2026-05-27 16:30:25,819 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.7636s
+2026-05-27 16:30:26,018 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-05-27 16:30:26,019 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0007s
+2026-05-27 16:30:26,019 - routers.reservations - DEBUG - Querying reservationss: query={}, sort=-reservation_date, skip=0, limit=100, fields=None
+2026-05-27 16:30:26,400 - routers.reservations - DEBUG - Found 17 reservationss
+2026-05-27 16:30:26,401 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.3826s
+2026-05-27 16:31:25,563 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-05-27 16:31:25,564 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0005s
+2026-05-27 16:31:25,564 - routers.salons - DEBUG - Querying salonss: query={}, sort=None, skip=0, limit=50, fields=None
+2026-05-27 16:31:26,075 - routers.salons - DEBUG - Found 1 salonss
+2026-05-27 16:31:26,076 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.5125s
+2026-05-27 16:31:29,032 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-05-27 16:31:29,033 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0004s
+2026-05-27 16:31:29,033 - routers.clients - DEBUG - Querying clientss: query={"phone__contains":"22985210000"}, sort=name, skip=0, limit=10, fields=None
+2026-05-27 16:31:29,418 - routers.clients - DEBUG - Found 1 clientss
+2026-05-27 16:31:29,419 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.3867s
+2026-05-27 16:31:30,270 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-05-27 16:31:30,270 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0004s
+2026-05-27 16:31:30,271 - routers.clients - DEBUG - Querying clientss: query={"name__contains":"marcio "}, sort=name, skip=0, limit=10, fields=None
+2026-05-27 16:31:30,487 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-05-27 16:31:30,488 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0004s
+2026-05-27 16:31:30,488 - routers.clients - DEBUG - Querying clientss: query={"name__contains":"marcio s"}, sort=name, skip=0, limit=10, fields=None
+2026-05-27 16:31:30,652 - routers.clients - DEBUG - Found 1 clientss
+2026-05-27 16:31:30,653 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.3827s
+2026-05-27 16:31:30,868 - routers.clients - DEBUG - Found 1 clientss
+2026-05-27 16:31:30,869 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.3815s
+2026-05-27 16:31:31,311 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-05-27 16:31:31,311 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0005s
+2026-05-27 16:31:31,312 - routers.clients - DEBUG - Querying clientss: query={"name__contains":"marcio sil"}, sort=name, skip=0, limit=10, fields=None
+2026-05-27 16:31:31,694 - routers.clients - DEBUG - Found 0 clientss
+2026-05-27 16:31:31,695 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.3843s
+2026-05-27 16:31:32,288 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-05-27 16:31:32,288 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0005s
+2026-05-27 16:31:32,289 - routers.clients - DEBUG - Querying clientss: query={"name__contains":"marcio silv"}, sort=name, skip=0, limit=10, fields=None
+2026-05-27 16:31:32,626 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-05-27 16:31:32,626 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0006s
+2026-05-27 16:31:32,627 - routers.clients - DEBUG - Querying clientss: query={"name__contains":"marcio silva"}, sort=name, skip=0, limit=10, fields=None
+2026-05-27 16:31:32,669 - routers.clients - DEBUG - Found 0 clientss
+2026-05-27 16:31:32,670 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.3825s
+2026-05-27 16:31:33,009 - routers.clients - DEBUG - Found 0 clientss
+2026-05-27 16:31:33,010 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.3846s
+2026-05-27 16:31:44,968 - core.auth - DEBUG - Authentication token validated for user hash: 3d1d0765
+2026-05-27 16:31:44,968 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-05-27 16:31:44,969 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0002s
+2026-05-27 16:31:44,969 - routers.reservations - DEBUG - Creating new reservations with data: client_name='marcio silva' client_phone='22985210000' client_email='' reservation_date=datetime.date(2026, 5, 29) reservation_time='19:00' party_size=5 salon='ANEXO' notes='' status='a confirmar' preference='Rodízio' calendar_event_id=None
+2026-05-27 16:31:45,674 - services.reservations - INFO - Created reservations with id: 19
+2026-05-27 16:31:45,674 - routers.reservations - INFO - Reservations created successfully with id: 19
+2026-05-27 16:31:45,675 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.7065s
+2026-05-27 16:31:45,903 - routers.google_calendar - INFO - Creating calendar event: Reserva - marcio silva
+2026-05-27 16:31:45,938 - httpcore.connection - DEBUG - connect_tcp.started host='oauth2.googleapis.com' port=443 local_address=None timeout=10.0 socket_options=None
+2026-05-27 16:31:46,101 - httpcore.connection - DEBUG - connect_tcp.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x7ff814bf5510>
+2026-05-27 16:31:46,101 - httpcore.connection - DEBUG - start_tls.started ssl_context=<ssl.SSLContext object at 0x7ff814be8840> server_hostname='oauth2.googleapis.com' timeout=10.0
+2026-05-27 16:31:46,252 - httpcore.connection - DEBUG - start_tls.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x7ff814bb1c90>
+2026-05-27 16:31:46,253 - httpcore.http11 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2026-05-27 16:31:46,253 - httpcore.http11 - DEBUG - send_request_headers.complete
+2026-05-27 16:31:46,254 - httpcore.http11 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2026-05-27 16:31:46,254 - httpcore.http11 - DEBUG - send_request_body.complete
+2026-05-27 16:31:46,254 - httpcore.http11 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2026-05-27 16:31:46,454 - httpcore.http11 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Expires', b'Mon, 01 Jan 1990 00:00:00 GMT'), (b'Cache-Control', b'no-cache, no-store, max-age=0, must-revalidate'), (b'Date', b'Wed, 27 May 2026 23:31:46 GMT'), (b'Pragma', b'no-cache'), (b'Content-Type', b'application/json; charset=utf-8'), (b'Vary', b'Origin'), (b'Vary', b'X-Origin'), (b'Vary', b'Referer'), (b'Content-Encoding', b'gzip'), (b'Server', b'scaffolding on HTTPServer2'), (b'X-XSS-Protection', b'0'), (b'X-Frame-Options', b'SAMEORIGIN'), (b'X-Content-Type-Options', b'nosniff'), (b'Alt-Svc', b'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'), (b'Transfer-Encoding', b'chunked')])
+2026-05-27 16:31:46,455 - httpx - INFO - HTTP Request: POST https://oauth2.googleapis.com/token "HTTP/1.1 200 OK"
+2026-05-27 16:31:46,455 - httpcore.http11 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2026-05-27 16:31:46,456 - httpcore.http11 - DEBUG - receive_response_body.complete
+2026-05-27 16:31:46,457 - httpcore.http11 - DEBUG - response_closed.started
+2026-05-27 16:31:46,457 - httpcore.http11 - DEBUG - response_closed.complete
+2026-05-27 16:31:46,457 - httpcore.connection - DEBUG - close.started
+2026-05-27 16:31:46,457 - httpcore.connection - DEBUG - close.complete
+2026-05-27 16:31:46,482 - httpcore.connection - DEBUG - connect_tcp.started host='www.googleapis.com' port=443 local_address=None timeout=15.0 socket_options=None
+2026-05-27 16:31:46,655 - httpcore.connection - DEBUG - connect_tcp.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x7ff8177d1cc0>
+2026-05-27 16:31:46,655 - httpcore.connection - DEBUG - start_tls.started ssl_context=<ssl.SSLContext object at 0x7ff814be8ec0> server_hostname='www.googleapis.com' timeout=15.0
+2026-05-27 16:31:46,840 - httpcore.connection - DEBUG - start_tls.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x7ff814bf7190>
+2026-05-27 16:31:46,841 - httpcore.http11 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2026-05-27 16:31:46,841 - httpcore.http11 - DEBUG - send_request_headers.complete
+2026-05-27 16:31:46,841 - httpcore.http11 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2026-05-27 16:31:46,841 - httpcore.http11 - DEBUG - send_request_body.complete
+2026-05-27 16:31:46,842 - httpcore.http11 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2026-05-27 16:31:47,449 - httpcore.http11 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Wed, 27 May 2026 23:31:47 GMT'), (b'Pragma', b'no-cache'), (b'Expires', b'Mon, 01 Jan 1990 00:00:00 GMT'), (b'ETag', b'"3559849414524926"'), (b'Cache-Control', b'no-cache, no-store, max-age=0, must-revalidate'), (b'Content-Type', b'application/json; charset=UTF-8'), (b'Vary', b'Origin'), (b'Vary', b'X-Origin'), (b'Vary', b'Referer'), (b'Content-Encoding', b'gzip'), (b'Server', b'ESF'), (b'X-XSS-Protection', b'0'), (b'X-Frame-Options', b'SAMEORIGIN'), (b'X-Content-Type-Options', b'nosniff'), (b'Alt-Svc', b'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'), (b'x-l2-request-path', b'l2-managed-14'), (b'Transfer-Encoding', b'chunked')])
+2026-05-27 16:31:47,450 - httpx - INFO - HTTP Request: POST https://www.googleapis.com/calendar/v3/calendars/primary/events?sendUpdates=all "HTTP/1.1 200 OK"
+2026-05-27 16:31:47,450 - httpcore.http11 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2026-05-27 16:31:47,451 - httpcore.http11 - DEBUG - receive_response_body.complete
+2026-05-27 16:31:47,451 - httpcore.http11 - DEBUG - response_closed.started
+2026-05-27 16:31:47,451 - httpcore.http11 - DEBUG - response_closed.complete
+2026-05-27 16:31:47,451 - httpcore.connection - DEBUG - close.started
+2026-05-27 16:31:47,452 - httpcore.connection - DEBUG - close.complete
+2026-05-27 16:31:47,452 - routers.google_calendar - INFO - Calendar event created: jsltr9a98nqr75b5lj401oeerg
+2026-05-27 16:31:47,660 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-05-27 16:31:47,661 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0006s
+2026-05-27 16:31:47,661 - routers.reservations - DEBUG - Updating reservations (all) 19 with data: client_name=None client_phone=None client_email=None reservation_date=None reservation_time=None party_size=None salon=None notes=None status=None preference=None calendar_event_id='jsltr9a98nqr75b5lj401oeerg'
+2026-05-27 16:31:48,425 - services.reservations - INFO - Updated reservations 19
+2026-05-27 16:31:48,425 - routers.reservations - INFO - Reservations 19 updated successfully (all)
+2026-05-27 16:31:48,426 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.7659s
+2026-05-27 16:31:48,641 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-05-27 16:31:48,642 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0008s
+2026-05-27 16:31:48,644 - routers.clients - DEBUG - Querying clientss: query={"phone":"22985210000"}, sort=None, skip=0, limit=1, fields=None
+2026-05-27 16:31:49,026 - routers.clients - DEBUG - Found 1 clientss
+2026-05-27 16:31:49,027 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.3860s
+2026-05-27 16:31:49,233 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-05-27 16:31:49,234 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0006s
+2026-05-27 16:31:49,234 - routers.clients - DEBUG - Updating clients (all) 2 with data: name='marcio silva' phone='22985210000' email=None notes=''
+2026-05-27 16:31:49,998 - services.clients - INFO - Updated clients 2
+2026-05-27 16:31:49,999 - routers.clients - INFO - Clients 2 updated successfully (all)
+2026-05-27 16:31:50,000 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.7669s
+2026-05-27 16:31:50,235 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-05-27 16:31:50,236 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0005s
+2026-05-27 16:31:50,236 - routers.reservations - DEBUG - Querying reservationss: query={}, sort=-reservation_date, skip=0, limit=100, fields=None
+2026-05-27 16:31:50,682 - routers.reservations - DEBUG - Found 18 reservationss
+2026-05-27 16:31:50,683 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.4482s
+2026-05-27 16:32:46,308 - core.auth - DEBUG - Authentication token validated for user hash: 3d1d0765
+2026-05-27 16:32:46,309 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-05-27 16:32:46,309 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0003s
+2026-05-27 16:32:46,309 - routers.reservations - DEBUG - Updating reservations 19 with data: client_name=None client_phone=None client_email=None reservation_date=None reservation_time=None party_size=None salon=None notes=None status='cancelada' preference=None calendar_event_id=None
+2026-05-27 16:32:47,075 - services.reservations - INFO - Updated reservations 19
+2026-05-27 16:32:47,075 - routers.reservations - INFO - Reservations 19 updated successfully
+2026-05-27 16:32:47,076 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.7670s
+2026-05-27 16:32:47,285 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-05-27 16:32:47,285 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0003s
+2026-05-27 16:32:47,286 - routers.reservations - DEBUG - Querying reservationss: query={}, sort=-reservation_date, skip=0, limit=100, fields=None
+2026-05-27 16:32:47,731 - routers.reservations - DEBUG - Found 18 reservationss
+2026-05-27 16:32:47,733 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.4476s
+2026-05-27 16:37:01,495 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-05-27 16:37:01,496 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0005s
+2026-05-27 16:37:01,497 - routers.salons - DEBUG - Querying salonss: query={}, sort=None, skip=0, limit=50, fields=None
+2026-05-27 16:37:02,004 - routers.salons - DEBUG - Found 1 salonss
+2026-05-27 16:37:02,004 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.5090s
+2026-05-27 16:37:04,614 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-05-27 16:37:04,614 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0005s
+2026-05-27 16:37:04,614 - routers.clients - DEBUG - Querying clientss: query={"phone__contains":"22985210000"}, sort=name, skip=0, limit=10, fields=None
+2026-05-27 16:37:05,123 - routers.clients - DEBUG - Found 1 clientss
+2026-05-27 16:37:05,124 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.5106s
+2026-05-27 16:37:05,945 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-05-27 16:37:05,945 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0005s
+2026-05-27 16:37:05,946 - routers.clients - DEBUG - Querying clientss: query={"name__contains":"marcio b"}, sort=name, skip=0, limit=10, fields=None
+2026-05-27 16:37:06,327 - routers.clients - DEBUG - Found 0 clientss
+2026-05-27 16:37:06,328 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.3833s
+2026-05-27 16:37:06,485 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-05-27 16:37:06,486 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0007s
+2026-05-27 16:37:06,487 - routers.clients - DEBUG - Querying clientss: query={"name__contains":"marcio br"}, sort=name, skip=0, limit=10, fields=None
+2026-05-27 16:37:06,788 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-05-27 16:37:06,789 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0005s
+2026-05-27 16:37:06,789 - routers.clients - DEBUG - Querying clientss: query={"name__contains":"marcio bra"}, sort=name, skip=0, limit=10, fields=None
+2026-05-27 16:37:06,868 - routers.clients - DEBUG - Found 0 clientss
+2026-05-27 16:37:06,868 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.3830s
+2026-05-27 16:37:07,170 - routers.clients - DEBUG - Found 0 clientss
+2026-05-27 16:37:07,171 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.3830s
+2026-05-27 16:37:07,380 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-05-27 16:37:07,380 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0005s
+2026-05-27 16:37:07,381 - routers.clients - DEBUG - Querying clientss: query={"name__contains":"marcio bragfa"}, sort=name, skip=0, limit=10, fields=None
+2026-05-27 16:37:07,762 - routers.clients - DEBUG - Found 0 clientss
+2026-05-27 16:37:07,763 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.3831s
+2026-05-27 16:37:30,709 - core.auth - DEBUG - Authentication token validated for user hash: 3d1d0765
+2026-05-27 16:37:30,709 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-05-27 16:37:30,710 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0003s
+2026-05-27 16:37:30,710 - routers.reservations - DEBUG - Creating new reservations with data: client_name='marcio bragfa' client_phone='22985210000' client_email='' reservation_date=datetime.date(2026, 5, 29) reservation_time='20:00' party_size=5 salon='ANEXO' notes='' status='a confirmar' preference='Rodízio' calendar_event_id=None
+2026-05-27 16:37:31,475 - services.reservations - INFO - Created reservations with id: 20
+2026-05-27 16:37:31,475 - routers.reservations - INFO - Reservations created successfully with id: 20
+2026-05-27 16:37:31,476 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.7665s
+2026-05-27 16:37:31,684 - routers.google_calendar - INFO - Creating calendar event: Reserva - marcio bragfa
+2026-05-27 16:37:31,717 - httpcore.connection - DEBUG - connect_tcp.started host='oauth2.googleapis.com' port=443 local_address=None timeout=10.0 socket_options=None
+2026-05-27 16:37:31,733 - httpcore.connection - DEBUG - connect_tcp.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x7ff814bf7940>
+2026-05-27 16:37:31,734 - httpcore.connection - DEBUG - start_tls.started ssl_context=<ssl.SSLContext object at 0x7ff814be8f40> server_hostname='oauth2.googleapis.com' timeout=10.0
+2026-05-27 16:37:31,745 - httpcore.connection - DEBUG - start_tls.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x7ff81778b580>
+2026-05-27 16:37:31,746 - httpcore.http11 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2026-05-27 16:37:31,746 - httpcore.http11 - DEBUG - send_request_headers.complete
+2026-05-27 16:37:31,746 - httpcore.http11 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2026-05-27 16:37:31,747 - httpcore.http11 - DEBUG - send_request_body.complete
+2026-05-27 16:37:31,747 - httpcore.http11 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2026-05-27 16:37:31,824 - httpcore.http11 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Expires', b'Mon, 01 Jan 1990 00:00:00 GMT'), (b'Cache-Control', b'no-cache, no-store, max-age=0, must-revalidate'), (b'Pragma', b'no-cache'), (b'Date', b'Wed, 27 May 2026 23:37:31 GMT'), (b'Content-Type', b'application/json; charset=utf-8'), (b'Vary', b'Origin'), (b'Vary', b'X-Origin'), (b'Vary', b'Referer'), (b'Content-Encoding', b'gzip'), (b'Server', b'scaffolding on HTTPServer2'), (b'X-XSS-Protection', b'0'), (b'X-Frame-Options', b'SAMEORIGIN'), (b'X-Content-Type-Options', b'nosniff'), (b'Alt-Svc', b'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'), (b'Transfer-Encoding', b'chunked')])
+2026-05-27 16:37:31,825 - httpx - INFO - HTTP Request: POST https://oauth2.googleapis.com/token "HTTP/1.1 200 OK"
+2026-05-27 16:37:31,825 - httpcore.http11 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2026-05-27 16:37:31,825 - httpcore.http11 - DEBUG - receive_response_body.complete
+2026-05-27 16:37:31,826 - httpcore.http11 - DEBUG - response_closed.started
+2026-05-27 16:37:31,826 - httpcore.http11 - DEBUG - response_closed.complete
+2026-05-27 16:37:31,827 - httpcore.connection - DEBUG - close.started
+2026-05-27 16:37:31,827 - httpcore.connection - DEBUG - close.complete
+2026-05-27 16:37:31,857 - httpcore.connection - DEBUG - connect_tcp.started host='www.googleapis.com' port=443 local_address=None timeout=15.0 socket_options=None
+2026-05-27 16:37:31,876 - httpcore.connection - DEBUG - connect_tcp.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x7ff814bf7fa0>
+2026-05-27 16:37:31,876 - httpcore.connection - DEBUG - start_tls.started ssl_context=<ssl.SSLContext object at 0x7ff814be8040> server_hostname='www.googleapis.com' timeout=15.0
+2026-05-27 16:37:31,888 - httpcore.connection - DEBUG - start_tls.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x7ff814bf5810>
+2026-05-27 16:37:31,889 - httpcore.http11 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2026-05-27 16:37:31,890 - httpcore.http11 - DEBUG - send_request_headers.complete
+2026-05-27 16:37:31,890 - httpcore.http11 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2026-05-27 16:37:31,891 - httpcore.http11 - DEBUG - send_request_body.complete
+2026-05-27 16:37:31,892 - httpcore.http11 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2026-05-27 16:37:32,295 - httpcore.http11 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Content-Type', b'application/json; charset=UTF-8'), (b'Date', b'Wed, 27 May 2026 23:37:32 GMT'), (b'Pragma', b'no-cache'), (b'Expires', b'Mon, 01 Jan 1990 00:00:00 GMT'), (b'Cache-Control', b'no-cache, no-store, max-age=0, must-revalidate'), (b'ETag', b'"3559850104463518"'), (b'Vary', b'Origin'), (b'Vary', b'X-Origin'), (b'Vary', b'Referer'), (b'Content-Encoding', b'gzip'), (b'Server', b'ESF'), (b'X-XSS-Protection', b'0'), (b'X-Frame-Options', b'SAMEORIGIN'), (b'X-Content-Type-Options', b'nosniff'), (b'Alt-Svc', b'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'), (b'x-l2-request-path', b'l2-managed-14'), (b'Transfer-Encoding', b'chunked')])
+2026-05-27 16:37:32,296 - httpx - INFO - HTTP Request: POST https://www.googleapis.com/calendar/v3/calendars/primary/events?sendUpdates=all "HTTP/1.1 200 OK"
+2026-05-27 16:37:32,297 - httpcore.http11 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2026-05-27 16:37:32,298 - httpcore.http11 - DEBUG - receive_response_body.complete
+2026-05-27 16:37:32,298 - httpcore.http11 - DEBUG - response_closed.started
+2026-05-27 16:37:32,298 - httpcore.http11 - DEBUG - response_closed.complete
+2026-05-27 16:37:32,299 - httpcore.connection - DEBUG - close.started
+2026-05-27 16:37:32,299 - httpcore.connection - DEBUG - close.complete
+2026-05-27 16:37:32,299 - routers.google_calendar - INFO - Calendar event created: 90cqo8tt1fcep80mk5h82arl58
+2026-05-27 16:37:32,503 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-05-27 16:37:32,503 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0005s
+2026-05-27 16:37:32,503 - routers.reservations - DEBUG - Updating reservations (all) 20 with data: client_name=None client_phone=None client_email=None reservation_date=None reservation_time=None party_size=None salon=None notes=None status=None preference=None calendar_event_id='90cqo8tt1fcep80mk5h82arl58'
+2026-05-27 16:37:33,335 - services.reservations - INFO - Updated reservations 20
+2026-05-27 16:37:33,335 - routers.reservations - INFO - Reservations 20 updated successfully (all)
+2026-05-27 16:37:33,336 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.8334s
+2026-05-27 16:37:33,538 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-05-27 16:37:33,538 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0006s
+2026-05-27 16:37:33,538 - routers.clients - DEBUG - Querying clientss: query={"phone":"22985210000"}, sort=None, skip=0, limit=1, fields=None
+2026-05-27 16:37:34,048 - routers.clients - DEBUG - Found 1 clientss
+2026-05-27 16:37:34,049 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.5110s
+2026-05-27 16:37:34,262 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-05-27 16:37:34,262 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0004s
+2026-05-27 16:37:34,263 - routers.clients - DEBUG - Updating clients (all) 2 with data: name='marcio bragfa' phone='22985210000' email=None notes=''
+2026-05-27 16:37:35,088 - services.clients - INFO - Updated clients 2
+2026-05-27 16:37:35,088 - routers.clients - INFO - Clients 2 updated successfully (all)
+2026-05-27 16:37:35,089 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.8268s
+2026-05-27 16:37:35,355 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-05-27 16:37:35,355 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0004s
+2026-05-27 16:37:35,356 - routers.reservations - DEBUG - Querying reservationss: query={}, sort=-reservation_date, skip=0, limit=100, fields=None
+2026-05-27 16:37:35,737 - routers.reservations - DEBUG - Found 19 reservationss
+2026-05-27 16:37:35,738 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.3834s
+2026-05-27 16:39:54,560 - core.auth - DEBUG - Authentication token validated for user hash: 3d1d0765
+2026-05-27 16:39:54,560 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-05-27 16:39:54,560 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0002s
+2026-05-27 16:39:54,561 - routers.reservations - DEBUG - Updating reservations 20 with data: client_name=None client_phone=None client_email=None reservation_date=None reservation_time=None party_size=None salon=None notes=None status='cancelada' preference=None calendar_event_id=None
+2026-05-27 16:39:55,322 - services.reservations - INFO - Updated reservations 20
+2026-05-27 16:39:55,323 - routers.reservations - INFO - Reservations 20 updated successfully
+2026-05-27 16:39:55,323 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.7630s
+2026-05-27 16:39:55,545 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-05-27 16:39:55,546 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0004s
+2026-05-27 16:39:55,546 - routers.reservations - DEBUG - Querying reservationss: query={}, sort=-reservation_date, skip=0, limit=100, fields=None
+2026-05-27 16:39:55,926 - routers.reservations - DEBUG - Found 19 reservationss
+2026-05-27 16:39:55,927 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.3821s
+2026-05-27 16:55:42,359 - services.database - DEBUG - [DB_OP] Starting database close
+2026-05-27 16:55:42,360 - core.database - INFO - Database connection closed and engine disposed
+2026-05-27 16:55:42,361 - services.database - INFO - Database connections closed
+2026-05-27 16:55:42,361 - services.database - DEBUG - [DB_OP] Database close completed in 0.0025s

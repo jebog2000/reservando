@@ -1,0 +1,35 @@
+{
+    "title": "salons",
+    "type": "object",
+    "properties": {
+        "id": {
+            "type": "integer",
+            "description": "Primary key, auto-increment"
+        },
+        "user_id": {
+            "type": "string",
+            "description": "User ID"
+        },
+        "name": {
+            "type": "string",
+            "description": "Salon name"
+        },
+        "capacity": {
+            "type": "integer",
+            "description": "Seating capacity"
+        },
+        "description": {
+            "type": "string",
+            "description": "Salon description"
+        },
+        "active": {
+            "type": "boolean",
+            "description": "Whether salon is active"
+        }
+    },
+    "required": [
+        "id",
+        "user_id",
+        "name"
+    ]
+}

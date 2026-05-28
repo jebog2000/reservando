@@ -1,0 +1,62 @@
+2026-05-19 10:00:54,425 - main - INFO - === Logging system initialized ===
+2026-05-19 10:00:54,425 - main - INFO - Log file: logs/app_20260519_100054.log
+2026-05-19 10:00:54,426 - main - INFO - Log level: INFO
+2026-05-19 10:00:54,426 - main - INFO - Timestamp: 20260519_100054
+2026-05-19 10:00:55,431 - main - INFO - Included router: routers.aihub.router
+2026-05-19 10:00:55,458 - main - INFO - Included router: routers.auth.router
+2026-05-19 10:00:55,462 - main - INFO - Included router: routers.health.router
+2026-05-19 10:00:55,521 - main - INFO - Included router: routers.reservations.router
+2026-05-19 10:00:55,570 - main - INFO - Included router: routers.salons.router
+2026-05-19 10:00:55,595 - main - INFO - Included router: routers.settings.router
+2026-05-19 10:00:55,642 - main - INFO - Included router: routers.storage.router
+2026-05-19 10:00:55,651 - main - INFO - Included router: routers.user.router
+2026-05-19 10:00:55,652 - main - INFO - === Application startup initiated ===
+2026-05-19 10:00:55,652 - services.database - INFO - Ignore creating tables
+2026-05-19 10:00:55,652 - services.mock_data - INFO - Ignore initialize data
+2026-05-19 10:00:55,652 - services.auth - INFO - Ignore initialize admin
+2026-05-19 10:00:55,652 - main - INFO - === Application startup completed successfully ===
+2026-05-19 10:01:02,434 - core.config - DEBUG - Read dynamic attribute jwt_secret_key from environment variable JWT_SECRET_KEY
+2026-05-19 10:01:02,435 - core.config - DEBUG - Read dynamic attribute jwt_algorithm from environment variable JWT_ALGORITHM
+2026-05-19 10:01:02,445 - core.auth - DEBUG - Authentication token validated for user hash: 3d1d0765
+2026-05-19 10:01:02,675 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-05-19 10:01:02,675 - core.database - WARNING - Database session maker not available, attempting lazy initialization...
+2026-05-19 10:01:02,675 - core.database - WARNING - Database not initialized, attempting lazy initialization...
+2026-05-19 10:01:02,676 - core.database - INFO - Starting database initialization...
+2026-05-19 10:01:02,676 - core.config - DEBUG - Read dynamic attribute database_url from environment variable DATABASE_URL
+2026-05-19 10:01:02,676 - core.database - INFO - Normalizing database URL for async compatibility...
+2026-05-19 10:01:02,677 - core.database - INFO - Creating async database engine...
+2026-05-19 10:01:02,677 - core.database - INFO - Using QueuePool with connection pooling for non-Lambda environment
+2026-05-19 10:01:02,721 - core.database - INFO - Database engine created successfully
+2026-05-19 10:01:02,721 - core.database - INFO - Creating async session maker...
+2026-05-19 10:01:02,721 - core.database - INFO - Async session maker created successfully
+2026-05-19 10:01:02,721 - core.database - INFO - Database connection initialized successfully
+2026-05-19 10:01:02,721 - core.database - DEBUG - [DB_OP] Starting create_tables
+2026-05-19 10:01:02,721 - core.database - INFO - 🔧 Starting table creation...
+2026-05-19 10:01:04,172 - core.database - INFO - Tables initialized successfully
+2026-05-19 10:01:04,172 - core.database - DEBUG - [DB_OP] Create tables completed in 1.4513s
+2026-05-19 10:01:04,236 - core.database - INFO - Lazy database initialization completed successfully
+2026-05-19 10:01:04,236 - core.database - DEBUG - [DB_OP] Database session created successfully in 1.5613s
+2026-05-19 10:01:04,237 - routers.reservations - DEBUG - Querying reservationss: query={"reservation_date__gte":"2026-05-01","reservation_date__lte":"2026-05-31"}, sort=reservation_date, skip=0, limit=200, fields=None
+2026-05-19 10:01:04,815 - routers.reservations - DEBUG - Found 1 reservationss
+2026-05-19 10:01:04,817 - core.database - DEBUG - [DB_OP] Database session cleanup after 2.1416s
+2026-05-19 10:01:33,521 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-05-19 10:01:33,521 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0005s
+2026-05-19 10:01:33,522 - routers.reservations - DEBUG - Querying reservationss: query={"reservation_date__gte":"2026-05-01","reservation_date__lte":"2026-05-31"}, sort=reservation_date, skip=0, limit=200, fields=None
+2026-05-19 10:01:33,905 - routers.reservations - DEBUG - Found 1 reservationss
+2026-05-19 10:01:33,906 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.3846s
+2026-05-19 10:01:56,861 - dependencies.auth - DEBUG - Authentication required for request GET /api/v1/auth/me
+2026-05-19 10:02:05,897 - core.auth - DEBUG - Authentication token validated for user hash: 3d1d0765
+2026-05-19 10:02:06,119 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-05-19 10:02:06,121 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0020s
+2026-05-19 10:02:06,122 - routers.reservations - DEBUG - Querying reservationss: query={"reservation_date__gte":"2026-05-01","reservation_date__lte":"2026-05-31"}, sort=reservation_date, skip=0, limit=200, fields=None
+2026-05-19 10:02:06,507 - routers.reservations - DEBUG - Found 1 reservationss
+2026-05-19 10:02:06,509 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.3895s
+2026-05-19 10:02:36,518 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-05-19 10:02:36,518 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0005s
+2026-05-19 10:02:36,519 - routers.reservations - DEBUG - Querying reservationss: query={"reservation_date__gte":"2026-05-01","reservation_date__lte":"2026-05-31"}, sort=reservation_date, skip=0, limit=200, fields=None
+2026-05-19 10:02:36,900 - routers.reservations - DEBUG - Found 1 reservationss
+2026-05-19 10:02:36,901 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.3829s
+2026-05-19 10:02:59,237 - services.database - DEBUG - [DB_OP] Starting database close
+2026-05-19 10:02:59,304 - core.database - INFO - Database connection closed and engine disposed
+2026-05-19 10:02:59,304 - services.database - INFO - Database connections closed
+2026-05-19 10:02:59,305 - services.database - DEBUG - [DB_OP] Database close completed in 0.0675s

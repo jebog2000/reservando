@@ -1,0 +1,748 @@
+2026-05-19 12:21:06,190 - main - INFO - === Logging system initialized ===
+2026-05-19 12:21:06,190 - main - INFO - Log file: logs/app_20260519_122106.log
+2026-05-19 12:21:06,190 - main - INFO - Log level: INFO
+2026-05-19 12:21:06,190 - main - INFO - Timestamp: 20260519_122106
+2026-05-19 12:21:07,327 - main - INFO - Included router: routers.aihub.router
+2026-05-19 12:21:07,354 - main - INFO - Included router: routers.auth.router
+2026-05-19 12:21:07,361 - main - INFO - Included router: routers.health.router
+2026-05-19 12:21:07,701 - main - INFO - Included router: routers.printer_settings.router
+2026-05-19 12:21:07,774 - main - INFO - Included router: routers.reservations.router
+2026-05-19 12:21:07,825 - main - INFO - Included router: routers.salons.router
+2026-05-19 12:21:07,851 - main - INFO - Included router: routers.settings.router
+2026-05-19 12:21:07,898 - main - INFO - Included router: routers.storage.router
+2026-05-19 12:21:07,915 - main - INFO - Included router: routers.user.router
+2026-05-19 12:21:07,916 - main - INFO - === Application startup initiated ===
+2026-05-19 12:21:07,917 - services.database - INFO - Ignore creating tables
+2026-05-19 12:21:07,918 - services.mock_data - INFO - Ignore initialize data
+2026-05-19 12:21:07,918 - services.auth - INFO - Ignore initialize admin
+2026-05-19 12:21:07,918 - main - INFO - === Application startup completed successfully ===
+2026-05-19 12:21:14,845 - core.config - DEBUG - Read dynamic attribute jwt_secret_key from environment variable JWT_SECRET_KEY
+2026-05-19 12:21:14,845 - core.config - DEBUG - Read dynamic attribute jwt_algorithm from environment variable JWT_ALGORITHM
+2026-05-19 12:21:14,854 - core.auth - DEBUG - Authentication token validated for user hash: 3d1d0765
+2026-05-19 12:21:15,182 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-05-19 12:21:15,182 - core.database - WARNING - Database session maker not available, attempting lazy initialization...
+2026-05-19 12:21:15,182 - core.database - WARNING - Database not initialized, attempting lazy initialization...
+2026-05-19 12:21:15,182 - core.database - INFO - Starting database initialization...
+2026-05-19 12:21:15,182 - core.config - DEBUG - Read dynamic attribute database_url from environment variable DATABASE_URL
+2026-05-19 12:21:15,182 - core.database - INFO - Normalizing database URL for async compatibility...
+2026-05-19 12:21:15,184 - core.database - INFO - Creating async database engine...
+2026-05-19 12:21:15,184 - core.database - INFO - Using QueuePool with connection pooling for non-Lambda environment
+2026-05-19 12:21:15,241 - core.database - INFO - Database engine created successfully
+2026-05-19 12:21:15,242 - core.database - INFO - Creating async session maker...
+2026-05-19 12:21:15,243 - core.database - INFO - Async session maker created successfully
+2026-05-19 12:21:15,243 - core.database - INFO - Database connection initialized successfully
+2026-05-19 12:21:15,244 - core.database - DEBUG - [DB_OP] Starting create_tables
+2026-05-19 12:21:15,244 - core.database - INFO - 🔧 Starting table creation...
+2026-05-19 12:21:15,252 - core.auth - DEBUG - Authentication token validated for user hash: 3d1d0765
+2026-05-19 12:21:15,252 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-05-19 12:21:15,253 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0005s
+2026-05-19 12:21:15,253 - routers.printer_settings - DEBUG - Querying printer_settingss: query=None, sort=None, skip=0, limit=20, fields=None
+2026-05-19 12:21:16,644 - routers.printer_settings - DEBUG - Found 0 printer_settingss
+2026-05-19 12:21:16,644 - core.database - DEBUG - [DB_OP] Database session cleanup after 1.3922s
+2026-05-19 12:21:16,771 - core.database - INFO - Tables initialized successfully
+2026-05-19 12:21:16,772 - core.database - DEBUG - [DB_OP] Create tables completed in 1.5279s
+2026-05-19 12:21:16,835 - core.database - INFO - Lazy database initialization completed successfully
+2026-05-19 12:21:16,835 - core.database - DEBUG - [DB_OP] Database session created successfully in 1.6535s
+2026-05-19 12:21:16,836 - routers.reservations - DEBUG - Querying reservationss: query={"reservation_date__gte":"2026-05-01","reservation_date__lte":"2026-05-31"}, sort=reservation_date, skip=0, limit=200, fields=None
+2026-05-19 12:21:17,281 - services.reservations - ERROR - Error fetching reservations list: (sqlalchemy.dialects.postgresql.asyncpg.ProgrammingError) <class 'asyncpg.exceptions.UndefinedFunctionError'>: operator does not exist: date >= character varying
+HINT:  No operator matches the given name and argument types. You might need to add explicit type casts.
+[SQL: SELECT count(reservations.id) AS count_1 
+FROM reservations 
+WHERE reservations.reservation_date >= $1::VARCHAR AND reservations.reservation_date <= $2::VARCHAR]
+[parameters: ('2026-05-01', '2026-05-31')]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2026-05-19 12:21:17,281 - routers.reservations - ERROR - Error querying reservationss: (sqlalchemy.dialects.postgresql.asyncpg.ProgrammingError) <class 'asyncpg.exceptions.UndefinedFunctionError'>: operator does not exist: date >= character varying
+HINT:  No operator matches the given name and argument types. You might need to add explicit type casts.
+[SQL: SELECT count(reservations.id) AS count_1 
+FROM reservations 
+WHERE reservations.reservation_date >= $1::VARCHAR AND reservations.reservation_date <= $2::VARCHAR]
+[parameters: ('2026-05-01', '2026-05-31')]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+Traceback (most recent call last):
+  File "/data/chats/ebbf05d7d0d94d1299f7d038f8deb27b/.cache/python/lib/python3.10/site-packages/sqlalchemy/dialects/postgresql/asyncpg.py", line 526, in _prepare_and_execute
+    prepared_stmt, attributes = await adapt_connection._prepare(
+  File "/data/chats/ebbf05d7d0d94d1299f7d038f8deb27b/.cache/python/lib/python3.10/site-packages/sqlalchemy/dialects/postgresql/asyncpg.py", line 773, in _prepare
+    prepared_stmt = await self._connection.prepare(
+  File "/data/chats/ebbf05d7d0d94d1299f7d038f8deb27b/.cache/python/lib/python3.10/site-packages/asyncpg/connection.py", line 638, in prepare
+    return await self._prepare(
+  File "/data/chats/ebbf05d7d0d94d1299f7d038f8deb27b/.cache/python/lib/python3.10/site-packages/asyncpg/connection.py", line 657, in _prepare
+    stmt = await self._get_statement(
+  File "/data/chats/ebbf05d7d0d94d1299f7d038f8deb27b/.cache/python/lib/python3.10/site-packages/asyncpg/connection.py", line 443, in _get_statement
+    statement = await self._protocol.prepare(
+  File "asyncpg/protocol/protocol.pyx", line 165, in prepare
+asyncpg.exceptions.UndefinedFunctionError: operator does not exist: date >= character varying
+HINT:  No operator matches the given name and argument types. You might need to add explicit type casts.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/data/chats/ebbf05d7d0d94d1299f7d038f8deb27b/.cache/python/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1967, in _exec_single_context
+    self.dialect.do_execute(
+  File "/data/chats/ebbf05d7d0d94d1299f7d038f8deb27b/.cache/python/lib/python3.10/site-packages/sqlalchemy/engine/default.py", line 952, in do_execute
+    cursor.execute(statement, parameters)
+  File "/data/chats/ebbf05d7d0d94d1299f7d038f8deb27b/.cache/python/lib/python3.10/site-packages/sqlalchemy/dialects/postgresql/asyncpg.py", line 585, in execute
+    self._adapt_connection.await_(
+  File "/data/chats/ebbf05d7d0d94d1299f7d038f8deb27b/.cache/python/lib/python3.10/site-packages/sqlalchemy/util/_concurrency_py3k.py", line 132, in await_only
+    return current.parent.switch(awaitable)  # type: ignore[no-any-return,attr-defined] # noqa: E501
+  File "/data/chats/ebbf05d7d0d94d1299f7d038f8deb27b/.cache/python/lib/python3.10/site-packages/sqlalchemy/util/_concurrency_py3k.py", line 196, in greenlet_spawn
+    value = await result
+  File "/data/chats/ebbf05d7d0d94d1299f7d038f8deb27b/.cache/python/lib/python3.10/site-packages/sqlalchemy/dialects/postgresql/asyncpg.py", line 563, in _prepare_and_execute
+    self._handle_exception(error)
+  File "/data/chats/ebbf05d7d0d94d1299f7d038f8deb27b/.cache/python/lib/python3.10/site-packages/sqlalchemy/dialects/postgresql/asyncpg.py", line 513, in _handle_exception
+    self._adapt_connection._handle_exception(error)
+  File "/data/chats/ebbf05d7d0d94d1299f7d038f8deb27b/.cache/python/lib/python3.10/site-packages/sqlalchemy/dialects/postgresql/asyncpg.py", line 797, in _handle_exception
+    raise translated_error from error
+sqlalchemy.dialects.postgresql.asyncpg.AsyncAdapt_asyncpg_dbapi.ProgrammingError: <class 'asyncpg.exceptions.UndefinedFunctionError'>: operator does not exist: date >= character varying
+HINT:  No operator matches the given name and argument types. You might need to add explicit type casts.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/workspace/app/backend/routers/reservations.py", line 160, in query_reservationss_all
+    result = await service.get_list(
+  File "/workspace/app/backend/services/reservations.py", line 94, in get_list
+    count_result = await self.db.execute(count_query)
+  File "/data/chats/ebbf05d7d0d94d1299f7d038f8deb27b/.cache/python/lib/python3.10/site-packages/sqlalchemy/ext/asyncio/session.py", line 449, in execute
+    result = await greenlet_spawn(
+  File "/data/chats/ebbf05d7d0d94d1299f7d038f8deb27b/.cache/python/lib/python3.10/site-packages/sqlalchemy/util/_concurrency_py3k.py", line 201, in greenlet_spawn
+    result = context.throw(*sys.exc_info())
+  File "/data/chats/ebbf05d7d0d94d1299f7d038f8deb27b/.cache/python/lib/python3.10/site-packages/sqlalchemy/orm/session.py", line 2351, in execute
+    return self._execute_internal(
+  File "/data/chats/ebbf05d7d0d94d1299f7d038f8deb27b/.cache/python/lib/python3.10/site-packages/sqlalchemy/orm/session.py", line 2249, in _execute_internal
+    result: Result[Any] = compile_state_cls.orm_execute_statement(
+  File "/data/chats/ebbf05d7d0d94d1299f7d038f8deb27b/.cache/python/lib/python3.10/site-packages/sqlalchemy/orm/context.py", line 306, in orm_execute_statement
+    result = conn.execute(
+  File "/data/chats/ebbf05d7d0d94d1299f7d038f8deb27b/.cache/python/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1419, in execute
+    return meth(
+  File "/data/chats/ebbf05d7d0d94d1299f7d038f8deb27b/.cache/python/lib/python3.10/site-packages/sqlalchemy/sql/elements.py", line 527, in _execute_on_connection
+    return connection._execute_clauseelement(
+  File "/data/chats/ebbf05d7d0d94d1299f7d038f8deb27b/.cache/python/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1641, in _execute_clauseelement
+    ret = self._execute_context(
+  File "/data/chats/ebbf05d7d0d94d1299f7d038f8deb27b/.cache/python/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1846, in _execute_context
+    return self._exec_single_context(
+  File "/data/chats/ebbf05d7d0d94d1299f7d038f8deb27b/.cache/python/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1986, in _exec_single_context
+    self._handle_dbapi_exception(
+  File "/data/chats/ebbf05d7d0d94d1299f7d038f8deb27b/.cache/python/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 2363, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "/data/chats/ebbf05d7d0d94d1299f7d038f8deb27b/.cache/python/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1967, in _exec_single_context
+    self.dialect.do_execute(
+  File "/data/chats/ebbf05d7d0d94d1299f7d038f8deb27b/.cache/python/lib/python3.10/site-packages/sqlalchemy/engine/default.py", line 952, in do_execute
+    cursor.execute(statement, parameters)
+  File "/data/chats/ebbf05d7d0d94d1299f7d038f8deb27b/.cache/python/lib/python3.10/site-packages/sqlalchemy/dialects/postgresql/asyncpg.py", line 585, in execute
+    self._adapt_connection.await_(
+  File "/data/chats/ebbf05d7d0d94d1299f7d038f8deb27b/.cache/python/lib/python3.10/site-packages/sqlalchemy/util/_concurrency_py3k.py", line 132, in await_only
+    return current.parent.switch(awaitable)  # type: ignore[no-any-return,attr-defined] # noqa: E501
+  File "/data/chats/ebbf05d7d0d94d1299f7d038f8deb27b/.cache/python/lib/python3.10/site-packages/sqlalchemy/util/_concurrency_py3k.py", line 196, in greenlet_spawn
+    value = await result
+  File "/data/chats/ebbf05d7d0d94d1299f7d038f8deb27b/.cache/python/lib/python3.10/site-packages/sqlalchemy/dialects/postgresql/asyncpg.py", line 563, in _prepare_and_execute
+    self._handle_exception(error)
+  File "/data/chats/ebbf05d7d0d94d1299f7d038f8deb27b/.cache/python/lib/python3.10/site-packages/sqlalchemy/dialects/postgresql/asyncpg.py", line 513, in _handle_exception
+    self._adapt_connection._handle_exception(error)
+  File "/data/chats/ebbf05d7d0d94d1299f7d038f8deb27b/.cache/python/lib/python3.10/site-packages/sqlalchemy/dialects/postgresql/asyncpg.py", line 797, in _handle_exception
+    raise translated_error from error
+sqlalchemy.exc.ProgrammingError: (sqlalchemy.dialects.postgresql.asyncpg.ProgrammingError) <class 'asyncpg.exceptions.UndefinedFunctionError'>: operator does not exist: date >= character varying
+HINT:  No operator matches the given name and argument types. You might need to add explicit type casts.
+[SQL: SELECT count(reservations.id) AS count_1 
+FROM reservations 
+WHERE reservations.reservation_date >= $1::VARCHAR AND reservations.reservation_date <= $2::VARCHAR]
+[parameters: ('2026-05-01', '2026-05-31')]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2026-05-19 12:21:17,316 - core.database - ERROR - Database session error: 500: Internal server error: (sqlalchemy.dialects.postgresql.asyncpg.ProgrammingError) <class 'asyncpg.exceptions.UndefinedFunctionError'>: operator does not exist: date >= character varying
+HINT:  No operator matches the given name and argument types. You might need to add explicit type casts.
+[SQL: SELECT count(reservations.id) AS count_1 
+FROM reservations 
+WHERE reservations.reservation_date >= $1::VARCHAR AND reservations.reservation_date <= $2::VARCHAR]
+[parameters: ('2026-05-01', '2026-05-31')]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+Traceback (most recent call last):
+  File "/data/chats/ebbf05d7d0d94d1299f7d038f8deb27b/.cache/python/lib/python3.10/site-packages/sqlalchemy/dialects/postgresql/asyncpg.py", line 526, in _prepare_and_execute
+    prepared_stmt, attributes = await adapt_connection._prepare(
+  File "/data/chats/ebbf05d7d0d94d1299f7d038f8deb27b/.cache/python/lib/python3.10/site-packages/sqlalchemy/dialects/postgresql/asyncpg.py", line 773, in _prepare
+    prepared_stmt = await self._connection.prepare(
+  File "/data/chats/ebbf05d7d0d94d1299f7d038f8deb27b/.cache/python/lib/python3.10/site-packages/asyncpg/connection.py", line 638, in prepare
+    return await self._prepare(
+  File "/data/chats/ebbf05d7d0d94d1299f7d038f8deb27b/.cache/python/lib/python3.10/site-packages/asyncpg/connection.py", line 657, in _prepare
+    stmt = await self._get_statement(
+  File "/data/chats/ebbf05d7d0d94d1299f7d038f8deb27b/.cache/python/lib/python3.10/site-packages/asyncpg/connection.py", line 443, in _get_statement
+    statement = await self._protocol.prepare(
+  File "asyncpg/protocol/protocol.pyx", line 165, in prepare
+asyncpg.exceptions.UndefinedFunctionError: operator does not exist: date >= character varying
+HINT:  No operator matches the given name and argument types. You might need to add explicit type casts.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/data/chats/ebbf05d7d0d94d1299f7d038f8deb27b/.cache/python/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1967, in _exec_single_context
+    self.dialect.do_execute(
+  File "/data/chats/ebbf05d7d0d94d1299f7d038f8deb27b/.cache/python/lib/python3.10/site-packages/sqlalchemy/engine/default.py", line 952, in do_execute
+    cursor.execute(statement, parameters)
+  File "/data/chats/ebbf05d7d0d94d1299f7d038f8deb27b/.cache/python/lib/python3.10/site-packages/sqlalchemy/dialects/postgresql/asyncpg.py", line 585, in execute
+    self._adapt_connection.await_(
+  File "/data/chats/ebbf05d7d0d94d1299f7d038f8deb27b/.cache/python/lib/python3.10/site-packages/sqlalchemy/util/_concurrency_py3k.py", line 132, in await_only
+    return current.parent.switch(awaitable)  # type: ignore[no-any-return,attr-defined] # noqa: E501
+  File "/data/chats/ebbf05d7d0d94d1299f7d038f8deb27b/.cache/python/lib/python3.10/site-packages/sqlalchemy/util/_concurrency_py3k.py", line 196, in greenlet_spawn
+    value = await result
+  File "/data/chats/ebbf05d7d0d94d1299f7d038f8deb27b/.cache/python/lib/python3.10/site-packages/sqlalchemy/dialects/postgresql/asyncpg.py", line 563, in _prepare_and_execute
+    self._handle_exception(error)
+  File "/data/chats/ebbf05d7d0d94d1299f7d038f8deb27b/.cache/python/lib/python3.10/site-packages/sqlalchemy/dialects/postgresql/asyncpg.py", line 513, in _handle_exception
+    self._adapt_connection._handle_exception(error)
+  File "/data/chats/ebbf05d7d0d94d1299f7d038f8deb27b/.cache/python/lib/python3.10/site-packages/sqlalchemy/dialects/postgresql/asyncpg.py", line 797, in _handle_exception
+    raise translated_error from error
+sqlalchemy.dialects.postgresql.asyncpg.AsyncAdapt_asyncpg_dbapi.ProgrammingError: <class 'asyncpg.exceptions.UndefinedFunctionError'>: operator does not exist: date >= character varying
+HINT:  No operator matches the given name and argument types. You might need to add explicit type casts.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/workspace/app/backend/routers/reservations.py", line 160, in query_reservationss_all
+    result = await service.get_list(
+  File "/workspace/app/backend/services/reservations.py", line 94, in get_list
+    count_result = await self.db.execute(count_query)
+  File "/data/chats/ebbf05d7d0d94d1299f7d038f8deb27b/.cache/python/lib/python3.10/site-packages/sqlalchemy/ext/asyncio/session.py", line 449, in execute
+    result = await greenlet_spawn(
+  File "/data/chats/ebbf05d7d0d94d1299f7d038f8deb27b/.cache/python/lib/python3.10/site-packages/sqlalchemy/util/_concurrency_py3k.py", line 201, in greenlet_spawn
+    result = context.throw(*sys.exc_info())
+  File "/data/chats/ebbf05d7d0d94d1299f7d038f8deb27b/.cache/python/lib/python3.10/site-packages/sqlalchemy/orm/session.py", line 2351, in execute
+    return self._execute_internal(
+  File "/data/chats/ebbf05d7d0d94d1299f7d038f8deb27b/.cache/python/lib/python3.10/site-packages/sqlalchemy/orm/session.py", line 2249, in _execute_internal
+    result: Result[Any] = compile_state_cls.orm_execute_statement(
+  File "/data/chats/ebbf05d7d0d94d1299f7d038f8deb27b/.cache/python/lib/python3.10/site-packages/sqlalchemy/orm/context.py", line 306, in orm_execute_statement
+    result = conn.execute(
+  File "/data/chats/ebbf05d7d0d94d1299f7d038f8deb27b/.cache/python/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1419, in execute
+    return meth(
+  File "/data/chats/ebbf05d7d0d94d1299f7d038f8deb27b/.cache/python/lib/python3.10/site-packages/sqlalchemy/sql/elements.py", line 527, in _execute_on_connection
+    return connection._execute_clauseelement(
+  File "/data/chats/ebbf05d7d0d94d1299f7d038f8deb27b/.cache/python/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1641, in _execute_clauseelement
+    ret = self._execute_context(
+  File "/data/chats/ebbf05d7d0d94d1299f7d038f8deb27b/.cache/python/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1846, in _execute_context
+    return self._exec_single_context(
+  File "/data/chats/ebbf05d7d0d94d1299f7d038f8deb27b/.cache/python/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1986, in _exec_single_context
+    self._handle_dbapi_exception(
+  File "/data/chats/ebbf05d7d0d94d1299f7d038f8deb27b/.cache/python/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 2363, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "/data/chats/ebbf05d7d0d94d1299f7d038f8deb27b/.cache/python/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1967, in _exec_single_context
+    self.dialect.do_execute(
+  File "/data/chats/ebbf05d7d0d94d1299f7d038f8deb27b/.cache/python/lib/python3.10/site-packages/sqlalchemy/engine/default.py", line 952, in do_execute
+    cursor.execute(statement, parameters)
+  File "/data/chats/ebbf05d7d0d94d1299f7d038f8deb27b/.cache/python/lib/python3.10/site-packages/sqlalchemy/dialects/postgresql/asyncpg.py", line 585, in execute
+    self._adapt_connection.await_(
+  File "/data/chats/ebbf05d7d0d94d1299f7d038f8deb27b/.cache/python/lib/python3.10/site-packages/sqlalchemy/util/_concurrency_py3k.py", line 132, in await_only
+    return current.parent.switch(awaitable)  # type: ignore[no-any-return,attr-defined] # noqa: E501
+  File "/data/chats/ebbf05d7d0d94d1299f7d038f8deb27b/.cache/python/lib/python3.10/site-packages/sqlalchemy/util/_concurrency_py3k.py", line 196, in greenlet_spawn
+    value = await result
+  File "/data/chats/ebbf05d7d0d94d1299f7d038f8deb27b/.cache/python/lib/python3.10/site-packages/sqlalchemy/dialects/postgresql/asyncpg.py", line 563, in _prepare_and_execute
+    self._handle_exception(error)
+  File "/data/chats/ebbf05d7d0d94d1299f7d038f8deb27b/.cache/python/lib/python3.10/site-packages/sqlalchemy/dialects/postgresql/asyncpg.py", line 513, in _handle_exception
+    self._adapt_connection._handle_exception(error)
+  File "/data/chats/ebbf05d7d0d94d1299f7d038f8deb27b/.cache/python/lib/python3.10/site-packages/sqlalchemy/dialects/postgresql/asyncpg.py", line 797, in _handle_exception
+    raise translated_error from error
+sqlalchemy.exc.ProgrammingError: (sqlalchemy.dialects.postgresql.asyncpg.ProgrammingError) <class 'asyncpg.exceptions.UndefinedFunctionError'>: operator does not exist: date >= character varying
+HINT:  No operator matches the given name and argument types. You might need to add explicit type casts.
+[SQL: SELECT count(reservations.id) AS count_1 
+FROM reservations 
+WHERE reservations.reservation_date >= $1::VARCHAR AND reservations.reservation_date <= $2::VARCHAR]
+[parameters: ('2026-05-01', '2026-05-31')]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/workspace/app/backend/core/database.py", line 553, in get_db
+    yield session
+  File "/data/chats/ebbf05d7d0d94d1299f7d038f8deb27b/.cache/python/lib/python3.10/site-packages/fastapi/routing.py", line 120, in app
+    response = await f(request)
+  File "/data/chats/ebbf05d7d0d94d1299f7d038f8deb27b/.cache/python/lib/python3.10/site-packages/fastapi/routing.py", line 674, in app
+    raw_response = await run_endpoint_function(
+  File "/data/chats/ebbf05d7d0d94d1299f7d038f8deb27b/.cache/python/lib/python3.10/site-packages/fastapi/routing.py", line 328, in run_endpoint_function
+    return await dependant.call(**values)
+  File "/workspace/app/backend/routers/reservations.py", line 172, in query_reservationss_all
+    raise HTTPException(status_code=500, detail=f"Internal server error: {str(e)}")
+fastapi.exceptions.HTTPException: 500: Internal server error: (sqlalchemy.dialects.postgresql.asyncpg.ProgrammingError) <class 'asyncpg.exceptions.UndefinedFunctionError'>: operator does not exist: date >= character varying
+HINT:  No operator matches the given name and argument types. You might need to add explicit type casts.
+[SQL: SELECT count(reservations.id) AS count_1 
+FROM reservations 
+WHERE reservations.reservation_date >= $1::VARCHAR AND reservations.reservation_date <= $2::VARCHAR]
+[parameters: ('2026-05-01', '2026-05-31')]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2026-05-19 12:21:17,320 - core.database - DEBUG - [DB_OP] Database session cleanup after 2.1380s
+2026-05-19 12:21:17,383 - core.database - ERROR - Failed to create database session: 500: Internal server error: (sqlalchemy.dialects.postgresql.asyncpg.ProgrammingError) <class 'asyncpg.exceptions.UndefinedFunctionError'>: operator does not exist: date >= character varying
+HINT:  No operator matches the given name and argument types. You might need to add explicit type casts.
+[SQL: SELECT count(reservations.id) AS count_1 
+FROM reservations 
+WHERE reservations.reservation_date >= $1::VARCHAR AND reservations.reservation_date <= $2::VARCHAR]
+[parameters: ('2026-05-01', '2026-05-31')]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+Traceback (most recent call last):
+  File "/data/chats/ebbf05d7d0d94d1299f7d038f8deb27b/.cache/python/lib/python3.10/site-packages/sqlalchemy/dialects/postgresql/asyncpg.py", line 526, in _prepare_and_execute
+    prepared_stmt, attributes = await adapt_connection._prepare(
+  File "/data/chats/ebbf05d7d0d94d1299f7d038f8deb27b/.cache/python/lib/python3.10/site-packages/sqlalchemy/dialects/postgresql/asyncpg.py", line 773, in _prepare
+    prepared_stmt = await self._connection.prepare(
+  File "/data/chats/ebbf05d7d0d94d1299f7d038f8deb27b/.cache/python/lib/python3.10/site-packages/asyncpg/connection.py", line 638, in prepare
+    return await self._prepare(
+  File "/data/chats/ebbf05d7d0d94d1299f7d038f8deb27b/.cache/python/lib/python3.10/site-packages/asyncpg/connection.py", line 657, in _prepare
+    stmt = await self._get_statement(
+  File "/data/chats/ebbf05d7d0d94d1299f7d038f8deb27b/.cache/python/lib/python3.10/site-packages/asyncpg/connection.py", line 443, in _get_statement
+    statement = await self._protocol.prepare(
+  File "asyncpg/protocol/protocol.pyx", line 165, in prepare
+asyncpg.exceptions.UndefinedFunctionError: operator does not exist: date >= character varying
+HINT:  No operator matches the given name and argument types. You might need to add explicit type casts.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/data/chats/ebbf05d7d0d94d1299f7d038f8deb27b/.cache/python/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1967, in _exec_single_context
+    self.dialect.do_execute(
+  File "/data/chats/ebbf05d7d0d94d1299f7d038f8deb27b/.cache/python/lib/python3.10/site-packages/sqlalchemy/engine/default.py", line 952, in do_execute
+    cursor.execute(statement, parameters)
+  File "/data/chats/ebbf05d7d0d94d1299f7d038f8deb27b/.cache/python/lib/python3.10/site-packages/sqlalchemy/dialects/postgresql/asyncpg.py", line 585, in execute
+    self._adapt_connection.await_(
+  File "/data/chats/ebbf05d7d0d94d1299f7d038f8deb27b/.cache/python/lib/python3.10/site-packages/sqlalchemy/util/_concurrency_py3k.py", line 132, in await_only
+    return current.parent.switch(awaitable)  # type: ignore[no-any-return,attr-defined] # noqa: E501
+  File "/data/chats/ebbf05d7d0d94d1299f7d038f8deb27b/.cache/python/lib/python3.10/site-packages/sqlalchemy/util/_concurrency_py3k.py", line 196, in greenlet_spawn
+    value = await result
+  File "/data/chats/ebbf05d7d0d94d1299f7d038f8deb27b/.cache/python/lib/python3.10/site-packages/sqlalchemy/dialects/postgresql/asyncpg.py", line 563, in _prepare_and_execute
+    self._handle_exception(error)
+  File "/data/chats/ebbf05d7d0d94d1299f7d038f8deb27b/.cache/python/lib/python3.10/site-packages/sqlalchemy/dialects/postgresql/asyncpg.py", line 513, in _handle_exception
+    self._adapt_connection._handle_exception(error)
+  File "/data/chats/ebbf05d7d0d94d1299f7d038f8deb27b/.cache/python/lib/python3.10/site-packages/sqlalchemy/dialects/postgresql/asyncpg.py", line 797, in _handle_exception
+    raise translated_error from error
+sqlalchemy.dialects.postgresql.asyncpg.AsyncAdapt_asyncpg_dbapi.ProgrammingError: <class 'asyncpg.exceptions.UndefinedFunctionError'>: operator does not exist: date >= character varying
+HINT:  No operator matches the given name and argument types. You might need to add explicit type casts.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/workspace/app/backend/routers/reservations.py", line 160, in query_reservationss_all
+    result = await service.get_list(
+  File "/workspace/app/backend/services/reservations.py", line 94, in get_list
+    count_result = await self.db.execute(count_query)
+  File "/data/chats/ebbf05d7d0d94d1299f7d038f8deb27b/.cache/python/lib/python3.10/site-packages/sqlalchemy/ext/asyncio/session.py", line 449, in execute
+    result = await greenlet_spawn(
+  File "/data/chats/ebbf05d7d0d94d1299f7d038f8deb27b/.cache/python/lib/python3.10/site-packages/sqlalchemy/util/_concurrency_py3k.py", line 201, in greenlet_spawn
+    result = context.throw(*sys.exc_info())
+  File "/data/chats/ebbf05d7d0d94d1299f7d038f8deb27b/.cache/python/lib/python3.10/site-packages/sqlalchemy/orm/session.py", line 2351, in execute
+    return self._execute_internal(
+  File "/data/chats/ebbf05d7d0d94d1299f7d038f8deb27b/.cache/python/lib/python3.10/site-packages/sqlalchemy/orm/session.py", line 2249, in _execute_internal
+    result: Result[Any] = compile_state_cls.orm_execute_statement(
+  File "/data/chats/ebbf05d7d0d94d1299f7d038f8deb27b/.cache/python/lib/python3.10/site-packages/sqlalchemy/orm/context.py", line 306, in orm_execute_statement
+    result = conn.execute(
+  File "/data/chats/ebbf05d7d0d94d1299f7d038f8deb27b/.cache/python/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1419, in execute
+    return meth(
+  File "/data/chats/ebbf05d7d0d94d1299f7d038f8deb27b/.cache/python/lib/python3.10/site-packages/sqlalchemy/sql/elements.py", line 527, in _execute_on_connection
+    return connection._execute_clauseelement(
+  File "/data/chats/ebbf05d7d0d94d1299f7d038f8deb27b/.cache/python/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1641, in _execute_clauseelement
+    ret = self._execute_context(
+  File "/data/chats/ebbf05d7d0d94d1299f7d038f8deb27b/.cache/python/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1846, in _execute_context
+    return self._exec_single_context(
+  File "/data/chats/ebbf05d7d0d94d1299f7d038f8deb27b/.cache/python/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1986, in _exec_single_context
+    self._handle_dbapi_exception(
+  File "/data/chats/ebbf05d7d0d94d1299f7d038f8deb27b/.cache/python/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 2363, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "/data/chats/ebbf05d7d0d94d1299f7d038f8deb27b/.cache/python/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1967, in _exec_single_context
+    self.dialect.do_execute(
+  File "/data/chats/ebbf05d7d0d94d1299f7d038f8deb27b/.cache/python/lib/python3.10/site-packages/sqlalchemy/engine/default.py", line 952, in do_execute
+    cursor.execute(statement, parameters)
+  File "/data/chats/ebbf05d7d0d94d1299f7d038f8deb27b/.cache/python/lib/python3.10/site-packages/sqlalchemy/dialects/postgresql/asyncpg.py", line 585, in execute
+    self._adapt_connection.await_(
+  File "/data/chats/ebbf05d7d0d94d1299f7d038f8deb27b/.cache/python/lib/python3.10/site-packages/sqlalchemy/util/_concurrency_py3k.py", line 132, in await_only
+    return current.parent.switch(awaitable)  # type: ignore[no-any-return,attr-defined] # noqa: E501
+  File "/data/chats/ebbf05d7d0d94d1299f7d038f8deb27b/.cache/python/lib/python3.10/site-packages/sqlalchemy/util/_concurrency_py3k.py", line 196, in greenlet_spawn
+    value = await result
+  File "/data/chats/ebbf05d7d0d94d1299f7d038f8deb27b/.cache/python/lib/python3.10/site-packages/sqlalchemy/dialects/postgresql/asyncpg.py", line 563, in _prepare_and_execute
+    self._handle_exception(error)
+  File "/data/chats/ebbf05d7d0d94d1299f7d038f8deb27b/.cache/python/lib/python3.10/site-packages/sqlalchemy/dialects/postgresql/asyncpg.py", line 513, in _handle_exception
+    self._adapt_connection._handle_exception(error)
+  File "/data/chats/ebbf05d7d0d94d1299f7d038f8deb27b/.cache/python/lib/python3.10/site-packages/sqlalchemy/dialects/postgresql/asyncpg.py", line 797, in _handle_exception
+    raise translated_error from error
+sqlalchemy.exc.ProgrammingError: (sqlalchemy.dialects.postgresql.asyncpg.ProgrammingError) <class 'asyncpg.exceptions.UndefinedFunctionError'>: operator does not exist: date >= character varying
+HINT:  No operator matches the given name and argument types. You might need to add explicit type casts.
+[SQL: SELECT count(reservations.id) AS count_1 
+FROM reservations 
+WHERE reservations.reservation_date >= $1::VARCHAR AND reservations.reservation_date <= $2::VARCHAR]
+[parameters: ('2026-05-01', '2026-05-31')]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/workspace/app/backend/core/database.py", line 553, in get_db
+    yield session
+  File "/data/chats/ebbf05d7d0d94d1299f7d038f8deb27b/.cache/python/lib/python3.10/site-packages/fastapi/routing.py", line 120, in app
+    response = await f(request)
+  File "/data/chats/ebbf05d7d0d94d1299f7d038f8deb27b/.cache/python/lib/python3.10/site-packages/fastapi/routing.py", line 674, in app
+    raw_response = await run_endpoint_function(
+  File "/data/chats/ebbf05d7d0d94d1299f7d038f8deb27b/.cache/python/lib/python3.10/site-packages/fastapi/routing.py", line 328, in run_endpoint_function
+    return await dependant.call(**values)
+  File "/workspace/app/backend/routers/reservations.py", line 172, in query_reservationss_all
+    raise HTTPException(status_code=500, detail=f"Internal server error: {str(e)}")
+fastapi.exceptions.HTTPException: 500: Internal server error: (sqlalchemy.dialects.postgresql.asyncpg.ProgrammingError) <class 'asyncpg.exceptions.UndefinedFunctionError'>: operator does not exist: date >= character varying
+HINT:  No operator matches the given name and argument types. You might need to add explicit type casts.
+[SQL: SELECT count(reservations.id) AS count_1 
+FROM reservations 
+WHERE reservations.reservation_date >= $1::VARCHAR AND reservations.reservation_date <= $2::VARCHAR]
+[parameters: ('2026-05-01', '2026-05-31')]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2026-05-19 12:21:27,695 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-05-19 12:21:27,695 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0004s
+2026-05-19 12:21:27,696 - routers.reservations - DEBUG - Querying reservationss: query={}, sort=-reservation_date, skip=0, limit=100, fields=None
+2026-05-19 12:21:28,267 - routers.reservations - DEBUG - Found 1 reservationss
+2026-05-19 12:21:28,269 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.5739s
+2026-05-19 12:21:30,790 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-05-19 12:21:30,791 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0004s
+2026-05-19 12:21:30,792 - routers.reservations - DEBUG - Fetching reservations (all) with id: 1, fields=None
+2026-05-19 12:21:30,798 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-05-19 12:21:30,799 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0004s
+2026-05-19 12:21:30,799 - routers.salons - DEBUG - Querying salonss: query={}, sort=None, skip=0, limit=50, fields=None
+2026-05-19 12:21:31,179 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.3887s
+2026-05-19 12:21:31,311 - routers.salons - DEBUG - Found 1 salonss
+2026-05-19 12:21:31,312 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.5138s
+2026-05-19 12:21:37,039 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-05-19 12:21:37,040 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0004s
+2026-05-19 12:21:37,040 - routers.reservations - DEBUG - Querying reservationss: query={}, sort=-reservation_date, skip=0, limit=100, fields=None
+2026-05-19 12:21:37,551 - routers.reservations - DEBUG - Found 1 reservationss
+2026-05-19 12:21:37,551 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.5120s
+2026-05-19 12:21:53,784 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-05-19 12:21:53,785 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0005s
+2026-05-19 12:21:53,785 - routers.reservations - DEBUG - Querying reservationss: query={"reservation_date__gte":"2026-05-18","reservation_date__lte":"2026-05-18"}, sort=-reservation_date, skip=0, limit=100, fields=None
+2026-05-19 12:21:54,164 - services.reservations - ERROR - Error fetching reservations list: (sqlalchemy.dialects.postgresql.asyncpg.ProgrammingError) <class 'asyncpg.exceptions.UndefinedFunctionError'>: operator does not exist: date >= character varying
+HINT:  No operator matches the given name and argument types. You might need to add explicit type casts.
+[SQL: SELECT count(reservations.id) AS count_1 
+FROM reservations 
+WHERE reservations.reservation_date >= $1::VARCHAR AND reservations.reservation_date <= $2::VARCHAR]
+[parameters: ('2026-05-18', '2026-05-18')]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2026-05-19 12:21:54,165 - routers.reservations - ERROR - Error querying reservationss: (sqlalchemy.dialects.postgresql.asyncpg.ProgrammingError) <class 'asyncpg.exceptions.UndefinedFunctionError'>: operator does not exist: date >= character varying
+HINT:  No operator matches the given name and argument types. You might need to add explicit type casts.
+[SQL: SELECT count(reservations.id) AS count_1 
+FROM reservations 
+WHERE reservations.reservation_date >= $1::VARCHAR AND reservations.reservation_date <= $2::VARCHAR]
+[parameters: ('2026-05-18', '2026-05-18')]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+Traceback (most recent call last):
+  File "/data/chats/ebbf05d7d0d94d1299f7d038f8deb27b/.cache/python/lib/python3.10/site-packages/sqlalchemy/dialects/postgresql/asyncpg.py", line 526, in _prepare_and_execute
+    prepared_stmt, attributes = await adapt_connection._prepare(
+  File "/data/chats/ebbf05d7d0d94d1299f7d038f8deb27b/.cache/python/lib/python3.10/site-packages/sqlalchemy/dialects/postgresql/asyncpg.py", line 773, in _prepare
+    prepared_stmt = await self._connection.prepare(
+  File "/data/chats/ebbf05d7d0d94d1299f7d038f8deb27b/.cache/python/lib/python3.10/site-packages/asyncpg/connection.py", line 638, in prepare
+    return await self._prepare(
+  File "/data/chats/ebbf05d7d0d94d1299f7d038f8deb27b/.cache/python/lib/python3.10/site-packages/asyncpg/connection.py", line 657, in _prepare
+    stmt = await self._get_statement(
+  File "/data/chats/ebbf05d7d0d94d1299f7d038f8deb27b/.cache/python/lib/python3.10/site-packages/asyncpg/connection.py", line 443, in _get_statement
+    statement = await self._protocol.prepare(
+  File "asyncpg/protocol/protocol.pyx", line 165, in prepare
+asyncpg.exceptions.UndefinedFunctionError: operator does not exist: date >= character varying
+HINT:  No operator matches the given name and argument types. You might need to add explicit type casts.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/data/chats/ebbf05d7d0d94d1299f7d038f8deb27b/.cache/python/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1967, in _exec_single_context
+    self.dialect.do_execute(
+  File "/data/chats/ebbf05d7d0d94d1299f7d038f8deb27b/.cache/python/lib/python3.10/site-packages/sqlalchemy/engine/default.py", line 952, in do_execute
+    cursor.execute(statement, parameters)
+  File "/data/chats/ebbf05d7d0d94d1299f7d038f8deb27b/.cache/python/lib/python3.10/site-packages/sqlalchemy/dialects/postgresql/asyncpg.py", line 585, in execute
+    self._adapt_connection.await_(
+  File "/data/chats/ebbf05d7d0d94d1299f7d038f8deb27b/.cache/python/lib/python3.10/site-packages/sqlalchemy/util/_concurrency_py3k.py", line 132, in await_only
+    return current.parent.switch(awaitable)  # type: ignore[no-any-return,attr-defined] # noqa: E501
+  File "/data/chats/ebbf05d7d0d94d1299f7d038f8deb27b/.cache/python/lib/python3.10/site-packages/sqlalchemy/util/_concurrency_py3k.py", line 196, in greenlet_spawn
+    value = await result
+  File "/data/chats/ebbf05d7d0d94d1299f7d038f8deb27b/.cache/python/lib/python3.10/site-packages/sqlalchemy/dialects/postgresql/asyncpg.py", line 563, in _prepare_and_execute
+    self._handle_exception(error)
+  File "/data/chats/ebbf05d7d0d94d1299f7d038f8deb27b/.cache/python/lib/python3.10/site-packages/sqlalchemy/dialects/postgresql/asyncpg.py", line 513, in _handle_exception
+    self._adapt_connection._handle_exception(error)
+  File "/data/chats/ebbf05d7d0d94d1299f7d038f8deb27b/.cache/python/lib/python3.10/site-packages/sqlalchemy/dialects/postgresql/asyncpg.py", line 797, in _handle_exception
+    raise translated_error from error
+sqlalchemy.dialects.postgresql.asyncpg.AsyncAdapt_asyncpg_dbapi.ProgrammingError: <class 'asyncpg.exceptions.UndefinedFunctionError'>: operator does not exist: date >= character varying
+HINT:  No operator matches the given name and argument types. You might need to add explicit type casts.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/workspace/app/backend/routers/reservations.py", line 160, in query_reservationss_all
+    result = await service.get_list(
+  File "/workspace/app/backend/services/reservations.py", line 94, in get_list
+    count_result = await self.db.execute(count_query)
+  File "/data/chats/ebbf05d7d0d94d1299f7d038f8deb27b/.cache/python/lib/python3.10/site-packages/sqlalchemy/ext/asyncio/session.py", line 449, in execute
+    result = await greenlet_spawn(
+  File "/data/chats/ebbf05d7d0d94d1299f7d038f8deb27b/.cache/python/lib/python3.10/site-packages/sqlalchemy/util/_concurrency_py3k.py", line 201, in greenlet_spawn
+    result = context.throw(*sys.exc_info())
+  File "/data/chats/ebbf05d7d0d94d1299f7d038f8deb27b/.cache/python/lib/python3.10/site-packages/sqlalchemy/orm/session.py", line 2351, in execute
+    return self._execute_internal(
+  File "/data/chats/ebbf05d7d0d94d1299f7d038f8deb27b/.cache/python/lib/python3.10/site-packages/sqlalchemy/orm/session.py", line 2249, in _execute_internal
+    result: Result[Any] = compile_state_cls.orm_execute_statement(
+  File "/data/chats/ebbf05d7d0d94d1299f7d038f8deb27b/.cache/python/lib/python3.10/site-packages/sqlalchemy/orm/context.py", line 306, in orm_execute_statement
+    result = conn.execute(
+  File "/data/chats/ebbf05d7d0d94d1299f7d038f8deb27b/.cache/python/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1419, in execute
+    return meth(
+  File "/data/chats/ebbf05d7d0d94d1299f7d038f8deb27b/.cache/python/lib/python3.10/site-packages/sqlalchemy/sql/elements.py", line 527, in _execute_on_connection
+    return connection._execute_clauseelement(
+  File "/data/chats/ebbf05d7d0d94d1299f7d038f8deb27b/.cache/python/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1641, in _execute_clauseelement
+    ret = self._execute_context(
+  File "/data/chats/ebbf05d7d0d94d1299f7d038f8deb27b/.cache/python/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1846, in _execute_context
+    return self._exec_single_context(
+  File "/data/chats/ebbf05d7d0d94d1299f7d038f8deb27b/.cache/python/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1986, in _exec_single_context
+    self._handle_dbapi_exception(
+  File "/data/chats/ebbf05d7d0d94d1299f7d038f8deb27b/.cache/python/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 2363, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "/data/chats/ebbf05d7d0d94d1299f7d038f8deb27b/.cache/python/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1967, in _exec_single_context
+    self.dialect.do_execute(
+  File "/data/chats/ebbf05d7d0d94d1299f7d038f8deb27b/.cache/python/lib/python3.10/site-packages/sqlalchemy/engine/default.py", line 952, in do_execute
+    cursor.execute(statement, parameters)
+  File "/data/chats/ebbf05d7d0d94d1299f7d038f8deb27b/.cache/python/lib/python3.10/site-packages/sqlalchemy/dialects/postgresql/asyncpg.py", line 585, in execute
+    self._adapt_connection.await_(
+  File "/data/chats/ebbf05d7d0d94d1299f7d038f8deb27b/.cache/python/lib/python3.10/site-packages/sqlalchemy/util/_concurrency_py3k.py", line 132, in await_only
+    return current.parent.switch(awaitable)  # type: ignore[no-any-return,attr-defined] # noqa: E501
+  File "/data/chats/ebbf05d7d0d94d1299f7d038f8deb27b/.cache/python/lib/python3.10/site-packages/sqlalchemy/util/_concurrency_py3k.py", line 196, in greenlet_spawn
+    value = await result
+  File "/data/chats/ebbf05d7d0d94d1299f7d038f8deb27b/.cache/python/lib/python3.10/site-packages/sqlalchemy/dialects/postgresql/asyncpg.py", line 563, in _prepare_and_execute
+    self._handle_exception(error)
+  File "/data/chats/ebbf05d7d0d94d1299f7d038f8deb27b/.cache/python/lib/python3.10/site-packages/sqlalchemy/dialects/postgresql/asyncpg.py", line 513, in _handle_exception
+    self._adapt_connection._handle_exception(error)
+  File "/data/chats/ebbf05d7d0d94d1299f7d038f8deb27b/.cache/python/lib/python3.10/site-packages/sqlalchemy/dialects/postgresql/asyncpg.py", line 797, in _handle_exception
+    raise translated_error from error
+sqlalchemy.exc.ProgrammingError: (sqlalchemy.dialects.postgresql.asyncpg.ProgrammingError) <class 'asyncpg.exceptions.UndefinedFunctionError'>: operator does not exist: date >= character varying
+HINT:  No operator matches the given name and argument types. You might need to add explicit type casts.
+[SQL: SELECT count(reservations.id) AS count_1 
+FROM reservations 
+WHERE reservations.reservation_date >= $1::VARCHAR AND reservations.reservation_date <= $2::VARCHAR]
+[parameters: ('2026-05-18', '2026-05-18')]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2026-05-19 12:21:54,169 - core.database - ERROR - Database session error: 500: Internal server error: (sqlalchemy.dialects.postgresql.asyncpg.ProgrammingError) <class 'asyncpg.exceptions.UndefinedFunctionError'>: operator does not exist: date >= character varying
+HINT:  No operator matches the given name and argument types. You might need to add explicit type casts.
+[SQL: SELECT count(reservations.id) AS count_1 
+FROM reservations 
+WHERE reservations.reservation_date >= $1::VARCHAR AND reservations.reservation_date <= $2::VARCHAR]
+[parameters: ('2026-05-18', '2026-05-18')]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+Traceback (most recent call last):
+  File "/data/chats/ebbf05d7d0d94d1299f7d038f8deb27b/.cache/python/lib/python3.10/site-packages/sqlalchemy/dialects/postgresql/asyncpg.py", line 526, in _prepare_and_execute
+    prepared_stmt, attributes = await adapt_connection._prepare(
+  File "/data/chats/ebbf05d7d0d94d1299f7d038f8deb27b/.cache/python/lib/python3.10/site-packages/sqlalchemy/dialects/postgresql/asyncpg.py", line 773, in _prepare
+    prepared_stmt = await self._connection.prepare(
+  File "/data/chats/ebbf05d7d0d94d1299f7d038f8deb27b/.cache/python/lib/python3.10/site-packages/asyncpg/connection.py", line 638, in prepare
+    return await self._prepare(
+  File "/data/chats/ebbf05d7d0d94d1299f7d038f8deb27b/.cache/python/lib/python3.10/site-packages/asyncpg/connection.py", line 657, in _prepare
+    stmt = await self._get_statement(
+  File "/data/chats/ebbf05d7d0d94d1299f7d038f8deb27b/.cache/python/lib/python3.10/site-packages/asyncpg/connection.py", line 443, in _get_statement
+    statement = await self._protocol.prepare(
+  File "asyncpg/protocol/protocol.pyx", line 165, in prepare
+asyncpg.exceptions.UndefinedFunctionError: operator does not exist: date >= character varying
+HINT:  No operator matches the given name and argument types. You might need to add explicit type casts.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/data/chats/ebbf05d7d0d94d1299f7d038f8deb27b/.cache/python/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1967, in _exec_single_context
+    self.dialect.do_execute(
+  File "/data/chats/ebbf05d7d0d94d1299f7d038f8deb27b/.cache/python/lib/python3.10/site-packages/sqlalchemy/engine/default.py", line 952, in do_execute
+    cursor.execute(statement, parameters)
+  File "/data/chats/ebbf05d7d0d94d1299f7d038f8deb27b/.cache/python/lib/python3.10/site-packages/sqlalchemy/dialects/postgresql/asyncpg.py", line 585, in execute
+    self._adapt_connection.await_(
+  File "/data/chats/ebbf05d7d0d94d1299f7d038f8deb27b/.cache/python/lib/python3.10/site-packages/sqlalchemy/util/_concurrency_py3k.py", line 132, in await_only
+    return current.parent.switch(awaitable)  # type: ignore[no-any-return,attr-defined] # noqa: E501
+  File "/data/chats/ebbf05d7d0d94d1299f7d038f8deb27b/.cache/python/lib/python3.10/site-packages/sqlalchemy/util/_concurrency_py3k.py", line 196, in greenlet_spawn
+    value = await result
+  File "/data/chats/ebbf05d7d0d94d1299f7d038f8deb27b/.cache/python/lib/python3.10/site-packages/sqlalchemy/dialects/postgresql/asyncpg.py", line 563, in _prepare_and_execute
+    self._handle_exception(error)
+  File "/data/chats/ebbf05d7d0d94d1299f7d038f8deb27b/.cache/python/lib/python3.10/site-packages/sqlalchemy/dialects/postgresql/asyncpg.py", line 513, in _handle_exception
+    self._adapt_connection._handle_exception(error)
+  File "/data/chats/ebbf05d7d0d94d1299f7d038f8deb27b/.cache/python/lib/python3.10/site-packages/sqlalchemy/dialects/postgresql/asyncpg.py", line 797, in _handle_exception
+    raise translated_error from error
+sqlalchemy.dialects.postgresql.asyncpg.AsyncAdapt_asyncpg_dbapi.ProgrammingError: <class 'asyncpg.exceptions.UndefinedFunctionError'>: operator does not exist: date >= character varying
+HINT:  No operator matches the given name and argument types. You might need to add explicit type casts.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/workspace/app/backend/routers/reservations.py", line 160, in query_reservationss_all
+    result = await service.get_list(
+  File "/workspace/app/backend/services/reservations.py", line 94, in get_list
+    count_result = await self.db.execute(count_query)
+  File "/data/chats/ebbf05d7d0d94d1299f7d038f8deb27b/.cache/python/lib/python3.10/site-packages/sqlalchemy/ext/asyncio/session.py", line 449, in execute
+    result = await greenlet_spawn(
+  File "/data/chats/ebbf05d7d0d94d1299f7d038f8deb27b/.cache/python/lib/python3.10/site-packages/sqlalchemy/util/_concurrency_py3k.py", line 201, in greenlet_spawn
+    result = context.throw(*sys.exc_info())
+  File "/data/chats/ebbf05d7d0d94d1299f7d038f8deb27b/.cache/python/lib/python3.10/site-packages/sqlalchemy/orm/session.py", line 2351, in execute
+    return self._execute_internal(
+  File "/data/chats/ebbf05d7d0d94d1299f7d038f8deb27b/.cache/python/lib/python3.10/site-packages/sqlalchemy/orm/session.py", line 2249, in _execute_internal
+    result: Result[Any] = compile_state_cls.orm_execute_statement(
+  File "/data/chats/ebbf05d7d0d94d1299f7d038f8deb27b/.cache/python/lib/python3.10/site-packages/sqlalchemy/orm/context.py", line 306, in orm_execute_statement
+    result = conn.execute(
+  File "/data/chats/ebbf05d7d0d94d1299f7d038f8deb27b/.cache/python/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1419, in execute
+    return meth(
+  File "/data/chats/ebbf05d7d0d94d1299f7d038f8deb27b/.cache/python/lib/python3.10/site-packages/sqlalchemy/sql/elements.py", line 527, in _execute_on_connection
+    return connection._execute_clauseelement(
+  File "/data/chats/ebbf05d7d0d94d1299f7d038f8deb27b/.cache/python/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1641, in _execute_clauseelement
+    ret = self._execute_context(
+  File "/data/chats/ebbf05d7d0d94d1299f7d038f8deb27b/.cache/python/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1846, in _execute_context
+    return self._exec_single_context(
+  File "/data/chats/ebbf05d7d0d94d1299f7d038f8deb27b/.cache/python/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1986, in _exec_single_context
+    self._handle_dbapi_exception(
+  File "/data/chats/ebbf05d7d0d94d1299f7d038f8deb27b/.cache/python/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 2363, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "/data/chats/ebbf05d7d0d94d1299f7d038f8deb27b/.cache/python/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1967, in _exec_single_context
+    self.dialect.do_execute(
+  File "/data/chats/ebbf05d7d0d94d1299f7d038f8deb27b/.cache/python/lib/python3.10/site-packages/sqlalchemy/engine/default.py", line 952, in do_execute
+    cursor.execute(statement, parameters)
+  File "/data/chats/ebbf05d7d0d94d1299f7d038f8deb27b/.cache/python/lib/python3.10/site-packages/sqlalchemy/dialects/postgresql/asyncpg.py", line 585, in execute
+    self._adapt_connection.await_(
+  File "/data/chats/ebbf05d7d0d94d1299f7d038f8deb27b/.cache/python/lib/python3.10/site-packages/sqlalchemy/util/_concurrency_py3k.py", line 132, in await_only
+    return current.parent.switch(awaitable)  # type: ignore[no-any-return,attr-defined] # noqa: E501
+  File "/data/chats/ebbf05d7d0d94d1299f7d038f8deb27b/.cache/python/lib/python3.10/site-packages/sqlalchemy/util/_concurrency_py3k.py", line 196, in greenlet_spawn
+    value = await result
+  File "/data/chats/ebbf05d7d0d94d1299f7d038f8deb27b/.cache/python/lib/python3.10/site-packages/sqlalchemy/dialects/postgresql/asyncpg.py", line 563, in _prepare_and_execute
+    self._handle_exception(error)
+  File "/data/chats/ebbf05d7d0d94d1299f7d038f8deb27b/.cache/python/lib/python3.10/site-packages/sqlalchemy/dialects/postgresql/asyncpg.py", line 513, in _handle_exception
+    self._adapt_connection._handle_exception(error)
+  File "/data/chats/ebbf05d7d0d94d1299f7d038f8deb27b/.cache/python/lib/python3.10/site-packages/sqlalchemy/dialects/postgresql/asyncpg.py", line 797, in _handle_exception
+    raise translated_error from error
+sqlalchemy.exc.ProgrammingError: (sqlalchemy.dialects.postgresql.asyncpg.ProgrammingError) <class 'asyncpg.exceptions.UndefinedFunctionError'>: operator does not exist: date >= character varying
+HINT:  No operator matches the given name and argument types. You might need to add explicit type casts.
+[SQL: SELECT count(reservations.id) AS count_1 
+FROM reservations 
+WHERE reservations.reservation_date >= $1::VARCHAR AND reservations.reservation_date <= $2::VARCHAR]
+[parameters: ('2026-05-18', '2026-05-18')]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/workspace/app/backend/core/database.py", line 553, in get_db
+    yield session
+  File "/data/chats/ebbf05d7d0d94d1299f7d038f8deb27b/.cache/python/lib/python3.10/site-packages/fastapi/routing.py", line 120, in app
+    response = await f(request)
+  File "/data/chats/ebbf05d7d0d94d1299f7d038f8deb27b/.cache/python/lib/python3.10/site-packages/fastapi/routing.py", line 674, in app
+    raw_response = await run_endpoint_function(
+  File "/data/chats/ebbf05d7d0d94d1299f7d038f8deb27b/.cache/python/lib/python3.10/site-packages/fastapi/routing.py", line 328, in run_endpoint_function
+    return await dependant.call(**values)
+  File "/workspace/app/backend/routers/reservations.py", line 172, in query_reservationss_all
+    raise HTTPException(status_code=500, detail=f"Internal server error: {str(e)}")
+fastapi.exceptions.HTTPException: 500: Internal server error: (sqlalchemy.dialects.postgresql.asyncpg.ProgrammingError) <class 'asyncpg.exceptions.UndefinedFunctionError'>: operator does not exist: date >= character varying
+HINT:  No operator matches the given name and argument types. You might need to add explicit type casts.
+[SQL: SELECT count(reservations.id) AS count_1 
+FROM reservations 
+WHERE reservations.reservation_date >= $1::VARCHAR AND reservations.reservation_date <= $2::VARCHAR]
+[parameters: ('2026-05-18', '2026-05-18')]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2026-05-19 12:21:54,170 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.3862s
+2026-05-19 12:21:54,234 - core.database - ERROR - Failed to create database session: 500: Internal server error: (sqlalchemy.dialects.postgresql.asyncpg.ProgrammingError) <class 'asyncpg.exceptions.UndefinedFunctionError'>: operator does not exist: date >= character varying
+HINT:  No operator matches the given name and argument types. You might need to add explicit type casts.
+[SQL: SELECT count(reservations.id) AS count_1 
+FROM reservations 
+WHERE reservations.reservation_date >= $1::VARCHAR AND reservations.reservation_date <= $2::VARCHAR]
+[parameters: ('2026-05-18', '2026-05-18')]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+Traceback (most recent call last):
+  File "/data/chats/ebbf05d7d0d94d1299f7d038f8deb27b/.cache/python/lib/python3.10/site-packages/sqlalchemy/dialects/postgresql/asyncpg.py", line 526, in _prepare_and_execute
+    prepared_stmt, attributes = await adapt_connection._prepare(
+  File "/data/chats/ebbf05d7d0d94d1299f7d038f8deb27b/.cache/python/lib/python3.10/site-packages/sqlalchemy/dialects/postgresql/asyncpg.py", line 773, in _prepare
+    prepared_stmt = await self._connection.prepare(
+  File "/data/chats/ebbf05d7d0d94d1299f7d038f8deb27b/.cache/python/lib/python3.10/site-packages/asyncpg/connection.py", line 638, in prepare
+    return await self._prepare(
+  File "/data/chats/ebbf05d7d0d94d1299f7d038f8deb27b/.cache/python/lib/python3.10/site-packages/asyncpg/connection.py", line 657, in _prepare
+    stmt = await self._get_statement(
+  File "/data/chats/ebbf05d7d0d94d1299f7d038f8deb27b/.cache/python/lib/python3.10/site-packages/asyncpg/connection.py", line 443, in _get_statement
+    statement = await self._protocol.prepare(
+  File "asyncpg/protocol/protocol.pyx", line 165, in prepare
+asyncpg.exceptions.UndefinedFunctionError: operator does not exist: date >= character varying
+HINT:  No operator matches the given name and argument types. You might need to add explicit type casts.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/data/chats/ebbf05d7d0d94d1299f7d038f8deb27b/.cache/python/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1967, in _exec_single_context
+    self.dialect.do_execute(
+  File "/data/chats/ebbf05d7d0d94d1299f7d038f8deb27b/.cache/python/lib/python3.10/site-packages/sqlalchemy/engine/default.py", line 952, in do_execute
+    cursor.execute(statement, parameters)
+  File "/data/chats/ebbf05d7d0d94d1299f7d038f8deb27b/.cache/python/lib/python3.10/site-packages/sqlalchemy/dialects/postgresql/asyncpg.py", line 585, in execute
+    self._adapt_connection.await_(
+  File "/data/chats/ebbf05d7d0d94d1299f7d038f8deb27b/.cache/python/lib/python3.10/site-packages/sqlalchemy/util/_concurrency_py3k.py", line 132, in await_only
+    return current.parent.switch(awaitable)  # type: ignore[no-any-return,attr-defined] # noqa: E501
+  File "/data/chats/ebbf05d7d0d94d1299f7d038f8deb27b/.cache/python/lib/python3.10/site-packages/sqlalchemy/util/_concurrency_py3k.py", line 196, in greenlet_spawn
+    value = await result
+  File "/data/chats/ebbf05d7d0d94d1299f7d038f8deb27b/.cache/python/lib/python3.10/site-packages/sqlalchemy/dialects/postgresql/asyncpg.py", line 563, in _prepare_and_execute
+    self._handle_exception(error)
+  File "/data/chats/ebbf05d7d0d94d1299f7d038f8deb27b/.cache/python/lib/python3.10/site-packages/sqlalchemy/dialects/postgresql/asyncpg.py", line 513, in _handle_exception
+    self._adapt_connection._handle_exception(error)
+  File "/data/chats/ebbf05d7d0d94d1299f7d038f8deb27b/.cache/python/lib/python3.10/site-packages/sqlalchemy/dialects/postgresql/asyncpg.py", line 797, in _handle_exception
+    raise translated_error from error
+sqlalchemy.dialects.postgresql.asyncpg.AsyncAdapt_asyncpg_dbapi.ProgrammingError: <class 'asyncpg.exceptions.UndefinedFunctionError'>: operator does not exist: date >= character varying
+HINT:  No operator matches the given name and argument types. You might need to add explicit type casts.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/workspace/app/backend/routers/reservations.py", line 160, in query_reservationss_all
+    result = await service.get_list(
+  File "/workspace/app/backend/services/reservations.py", line 94, in get_list
+    count_result = await self.db.execute(count_query)
+  File "/data/chats/ebbf05d7d0d94d1299f7d038f8deb27b/.cache/python/lib/python3.10/site-packages/sqlalchemy/ext/asyncio/session.py", line 449, in execute
+    result = await greenlet_spawn(
+  File "/data/chats/ebbf05d7d0d94d1299f7d038f8deb27b/.cache/python/lib/python3.10/site-packages/sqlalchemy/util/_concurrency_py3k.py", line 201, in greenlet_spawn
+    result = context.throw(*sys.exc_info())
+  File "/data/chats/ebbf05d7d0d94d1299f7d038f8deb27b/.cache/python/lib/python3.10/site-packages/sqlalchemy/orm/session.py", line 2351, in execute
+    return self._execute_internal(
+  File "/data/chats/ebbf05d7d0d94d1299f7d038f8deb27b/.cache/python/lib/python3.10/site-packages/sqlalchemy/orm/session.py", line 2249, in _execute_internal
+    result: Result[Any] = compile_state_cls.orm_execute_statement(
+  File "/data/chats/ebbf05d7d0d94d1299f7d038f8deb27b/.cache/python/lib/python3.10/site-packages/sqlalchemy/orm/context.py", line 306, in orm_execute_statement
+    result = conn.execute(
+  File "/data/chats/ebbf05d7d0d94d1299f7d038f8deb27b/.cache/python/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1419, in execute
+    return meth(
+  File "/data/chats/ebbf05d7d0d94d1299f7d038f8deb27b/.cache/python/lib/python3.10/site-packages/sqlalchemy/sql/elements.py", line 527, in _execute_on_connection
+    return connection._execute_clauseelement(
+  File "/data/chats/ebbf05d7d0d94d1299f7d038f8deb27b/.cache/python/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1641, in _execute_clauseelement
+    ret = self._execute_context(
+  File "/data/chats/ebbf05d7d0d94d1299f7d038f8deb27b/.cache/python/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1846, in _execute_context
+    return self._exec_single_context(
+  File "/data/chats/ebbf05d7d0d94d1299f7d038f8deb27b/.cache/python/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1986, in _exec_single_context
+    self._handle_dbapi_exception(
+  File "/data/chats/ebbf05d7d0d94d1299f7d038f8deb27b/.cache/python/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 2363, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "/data/chats/ebbf05d7d0d94d1299f7d038f8deb27b/.cache/python/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1967, in _exec_single_context
+    self.dialect.do_execute(
+  File "/data/chats/ebbf05d7d0d94d1299f7d038f8deb27b/.cache/python/lib/python3.10/site-packages/sqlalchemy/engine/default.py", line 952, in do_execute
+    cursor.execute(statement, parameters)
+  File "/data/chats/ebbf05d7d0d94d1299f7d038f8deb27b/.cache/python/lib/python3.10/site-packages/sqlalchemy/dialects/postgresql/asyncpg.py", line 585, in execute
+    self._adapt_connection.await_(
+  File "/data/chats/ebbf05d7d0d94d1299f7d038f8deb27b/.cache/python/lib/python3.10/site-packages/sqlalchemy/util/_concurrency_py3k.py", line 132, in await_only
+    return current.parent.switch(awaitable)  # type: ignore[no-any-return,attr-defined] # noqa: E501
+  File "/data/chats/ebbf05d7d0d94d1299f7d038f8deb27b/.cache/python/lib/python3.10/site-packages/sqlalchemy/util/_concurrency_py3k.py", line 196, in greenlet_spawn
+    value = await result
+  File "/data/chats/ebbf05d7d0d94d1299f7d038f8deb27b/.cache/python/lib/python3.10/site-packages/sqlalchemy/dialects/postgresql/asyncpg.py", line 563, in _prepare_and_execute
+    self._handle_exception(error)
+  File "/data/chats/ebbf05d7d0d94d1299f7d038f8deb27b/.cache/python/lib/python3.10/site-packages/sqlalchemy/dialects/postgresql/asyncpg.py", line 513, in _handle_exception
+    self._adapt_connection._handle_exception(error)
+  File "/data/chats/ebbf05d7d0d94d1299f7d038f8deb27b/.cache/python/lib/python3.10/site-packages/sqlalchemy/dialects/postgresql/asyncpg.py", line 797, in _handle_exception
+    raise translated_error from error
+sqlalchemy.exc.ProgrammingError: (sqlalchemy.dialects.postgresql.asyncpg.ProgrammingError) <class 'asyncpg.exceptions.UndefinedFunctionError'>: operator does not exist: date >= character varying
+HINT:  No operator matches the given name and argument types. You might need to add explicit type casts.
+[SQL: SELECT count(reservations.id) AS count_1 
+FROM reservations 
+WHERE reservations.reservation_date >= $1::VARCHAR AND reservations.reservation_date <= $2::VARCHAR]
+[parameters: ('2026-05-18', '2026-05-18')]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/workspace/app/backend/core/database.py", line 553, in get_db
+    yield session
+  File "/data/chats/ebbf05d7d0d94d1299f7d038f8deb27b/.cache/python/lib/python3.10/site-packages/fastapi/routing.py", line 120, in app
+    response = await f(request)
+  File "/data/chats/ebbf05d7d0d94d1299f7d038f8deb27b/.cache/python/lib/python3.10/site-packages/fastapi/routing.py", line 674, in app
+    raw_response = await run_endpoint_function(
+  File "/data/chats/ebbf05d7d0d94d1299f7d038f8deb27b/.cache/python/lib/python3.10/site-packages/fastapi/routing.py", line 328, in run_endpoint_function
+    return await dependant.call(**values)
+  File "/workspace/app/backend/routers/reservations.py", line 172, in query_reservationss_all
+    raise HTTPException(status_code=500, detail=f"Internal server error: {str(e)}")
+fastapi.exceptions.HTTPException: 500: Internal server error: (sqlalchemy.dialects.postgresql.asyncpg.ProgrammingError) <class 'asyncpg.exceptions.UndefinedFunctionError'>: operator does not exist: date >= character varying
+HINT:  No operator matches the given name and argument types. You might need to add explicit type casts.
+[SQL: SELECT count(reservations.id) AS count_1 
+FROM reservations 
+WHERE reservations.reservation_date >= $1::VARCHAR AND reservations.reservation_date <= $2::VARCHAR]
+[parameters: ('2026-05-18', '2026-05-18')]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2026-05-19 12:23:27,656 - services.database - DEBUG - [DB_OP] Starting database close
+2026-05-19 12:23:27,788 - core.database - INFO - Database connection closed and engine disposed
+2026-05-19 12:23:27,789 - services.database - INFO - Database connections closed
+2026-05-19 12:23:27,789 - services.database - DEBUG - [DB_OP] Database close completed in 0.1330s
