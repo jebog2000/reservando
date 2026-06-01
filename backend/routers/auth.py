@@ -2,12 +2,10 @@ import hashlib
 import logging
 import os
 
-from core.auth import create_access_token
-from core.config import settings
 from core.database import get_db
 from dependencies.auth import get_current_user
-from fastapi import APIRouter, Depends, HTTPException, Request, status
-from models.auth import User
+from fastapi import APIRouter, Depends, HTTPException, status
+from pydantic import BaseModel
 from schemas.auth import UserResponse
 from services.auth import AuthService
 from sqlalchemy.ext.asyncio import AsyncSession
@@ -20,27 +18,30 @@ ADMIN_PASSWORD_HASH = os.environ.get("ADMIN_PASSWORD_HASH", "")
 PASSWORD_SALT = os.environ.get("PASSWORD_SALT", "reservando_salt_2026")
 
 
+class LoginRequest(BaseModel):
+    email: str
+    password: str
+
+
 def verify_password(password: str, stored_hash: str) -> bool:
     computed = hashlib.sha256((PASSWORD_SALT + password).encode()).hexdigest()
     return computed == stored_hash
 
 
 @router.get("/login")
-async def login(request: Request):
+async def login():
     """Return login page URL."""
-    from_url = request.query_params.get("from_url", "/")
-    return {"redirect_url": f"/auth/login?from_url={from_url}"}
+    return {"redirect_url": "/login"}
 
 
 @router.post("/login")
 async def do_login(
-    request: Request,
+    body: LoginRequest,
     db: AsyncSession = Depends(get_db),
 ):
     """Login with email and password."""
-    body = await request.json()
-    email = body.get("email", "").strip().lower()
-    password = body.get("password", "")
+    email = body.email.strip().lower()
+    password = body.password
 
     admin_email = ADMIN_EMAIL.strip().lower()
 
@@ -72,4 +73,4 @@ async def get_current_user_info(current_user: UserResponse = Depends(get_current
 @router.get("/logout")
 async def logout():
     """Logout user."""
-    return {"redirect_url": "/"}
+    return {"redirect_url": "/login"}
