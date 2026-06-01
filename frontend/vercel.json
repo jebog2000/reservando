@@ -5,6 +5,7 @@
       "destination": "https://reservando-production.up.railway.app/api/:path*"
     }
   ],
+  "installCommand": "pnpm install",
   "buildCommand": "pnpm build",
   "outputDirectory": "dist"
 }
